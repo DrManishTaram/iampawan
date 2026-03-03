@@ -41,8 +41,8 @@ const CONSONANT_MAP: Record<string, string> = {
   'ल': 'y',
   'ळ': 'G',
   'व': 'o',
-  'श': ''k',
-  'ष': '"k',
+  'श': "\u2018k",
+  'ष': "\u201Ck",
   'स': 'l',
   'ह': 'g',
 };
