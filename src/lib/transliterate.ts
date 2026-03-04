@@ -189,7 +189,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'jaise': 'जैसे', 'waise': 'वैसे', 'kaise': 'कैसे', 'aise': 'ऐसे',
   'jaisa': 'जैसा', 'waisa': 'वैसा', 'kaisa': 'कैसा', 'aisa': 'ऐसा',
   'jaisi': 'जैसी', 'waisi': 'वैसी', 'kaisi': 'कैसी', 'aisi': 'ऐसी',
-  'jahan': 'जहाँ', 'kahan': 'कहाँ', 'wahan': 'वहाँ',
+  'jahan': 'जहाँ', 'kahan': 'कहाँ',
   'idhar': 'इधर', 'udhar': 'उधर', 'kidhar': 'किधर',
   'sirf': 'सिर्फ़', 'bas': 'बस', 'bahut': 'बहुत', 'zyada': 'ज़्यादा', 'kam': 'कम',
   'phir': 'फिर', 'fir': 'फिर',
