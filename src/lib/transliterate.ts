@@ -169,7 +169,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'aap': 'आप', 'aapka': 'आपका', 'aapki': 'आपकी', 'aapke': 'आपके', 'aapko': 'आपको', 'aapse': 'आपसे', 'aapne': 'आपने',
   'woh': 'वह', 'wo': 'वो', 'wahan': 'वहाँ', 'wahin': 'वहीं',
   'yeh': 'यह', 'ye': 'ये', 'yahan': 'यहाँ', 'yahin': 'यहीं',
-  'jo': 'जो', 'jo': 'जो',
+  'jo': 'जो',
   'koi': 'कोई', 'kuch': 'कुछ', 'sab': 'सब', 'sabhi': 'सभी',
   'apna': 'अपना', 'apni': 'अपनी', 'apne': 'अपने',
   'is': 'इस', 'iska': 'इसका', 'iski': 'इसकी', 'iske': 'इसके', 'isko': 'इसको', 'isse': 'इससे', 'isne': 'इसने', 'isliye': 'इसलिए', 'isलिye': 'इसलिए',
