@@ -1,18 +1,20 @@
 /**
- * Hinglish → Unicode Hindi Transliteration Engine
+ * Hinglish → Unicode Hindi Transliteration Engine v3
  * 
- * Comprehensive rule-based, deterministic transliteration system.
- * Uses ITRANS-inspired conventions with common Hinglish variations.
- * Handles matras, half-letters, conjuncts, anusvara, visarga, chandrabindu.
- * Includes schwa deletion for natural Hindi output.
+ * Designed for natural Hinglish typing (NOT strict ITRANS).
+ * Key design decisions:
+ *   - No auto-halant: consecutive consonants = separate syllables with inherent 'a'
+ *   - Conjuncts only via explicit multi-char mappings or word overrides
+ *   - Single 'a' = inherent schwa (no matra), use 'aa' for ा
+ *   - Extensive word overrides for natural Hinglish output
+ *   - Use '_' between consonants to force halant/conjunct (e.g., "k_ya" → क्या)
  */
 
 const HALANT = '\u094D'; // ्
 
-// ── Consonant mappings (longest-match-first order) ──────────────────────
-// Keys MUST be sorted by length desc within the matching function.
+// ── Consonant mappings ──────────────────────────────────────────────────
 const CONSONANTS: Record<string, string> = {
-  // Special conjuncts (3+ chars)
+  // Explicit conjuncts (3+ chars)
   'ksh': 'क्ष',
   'cch': 'च्छ',
   'chh': 'छ',
@@ -20,14 +22,18 @@ const CONSONANTS: Record<string, string> = {
   'gya': 'ज्ञ',
   'gny': 'ज्ञ',
   'dny': 'ज्ञ',
-  'tra': 'त्र',  // NOTE: only used as conjunct consonant cluster
-  'thr': 'थ्र',
   'nch': 'ञ्च',
   'ngh': 'ङ्घ',
   'nth': 'न्थ',
   'ndh': 'न्ध',
   'mbh': 'म्भ',
   'nkh': 'ङ्ख',
+  'khy': 'ख्य',
+  'dry': 'द्र्य',
+  'dhy': 'ध्य',
+  'bhy': 'भ्य',
+  'shy': 'श्य',
+  'shw': 'श्व',
 
   // Aspirated / digraph consonants (2 chars)
   'kh': 'ख',
@@ -40,7 +46,6 @@ const CONSONANTS: Record<string, string> = {
   'dh': 'ध',
   'sh': 'श',
   'ng': 'ङ',
-  'nk': 'ङ्क',
 
   // Retroflex (uppercase)
   'Th': 'ठ',
@@ -53,7 +58,7 @@ const CONSONANTS: Record<string, string> = {
   'RR': 'ड़',
   'Rh': 'ढ़',
   'RH': 'ढ़',
-  
+
   // Single consonants
   'k': 'क',
   'g': 'ग',
@@ -83,76 +88,56 @@ const CONSONANTS: Record<string, string> = {
 };
 
 // ── Vowel mappings ──────────────────────────────────────────────────────
-// Independent forms (used at word-start or after another vowel)
 const VOWELS_INDEPENDENT: Record<string, string> = {
-  'aa':  'आ',
-  'AA':  'आ',
-  'ii':  'ई',
-  'ee':  'ई',
-  'uu':  'ऊ',
-  'oo':  'ऊ',
-  'ai':  'ऐ',
-  'ei':  'ऐ',
-  'au':  'औ',
-  'ou':  'औ',
-  'ri':  'ऋ',
-  'Ri':  'ऋ',
-  'a':   'अ',
-  'i':   'इ',
-  'u':   'उ',
-  'e':   'ए',
-  'o':   'ओ',
+  'aa': 'आ', 'AA': 'आ',
+  'ii': 'ई', 'ee': 'ई',
+  'uu': 'ऊ', 'oo': 'ऊ',
+  'ai': 'ऐ', 'ei': 'ऐ',
+  'au': 'औ', 'ou': 'औ',
+  'ri': 'ऋ', 'Ri': 'ऋ',
+  'a': 'अ',
+  'i': 'इ',
+  'u': 'उ',
+  'e': 'ए',
+  'o': 'ओ',
 };
 
-// Dependent forms (matras, used after consonants)
 const MATRAS: Record<string, string> = {
-  'aa':  'ा',
-  'AA':  'ा',
-  'ii':  'ी',
-  'ee':  'ी',
-  'uu':  'ू',
-  'oo':  'ू',
-  'ai':  'ै',
-  'ei':  'ै',
-  'au':  'ौ',
-  'ou':  'ौ',
-  'ri':  'ृ',
-  'Ri':  'ृ',
-  'a':   '',   // inherent 'a' — no matra
-  'i':   'ि',
-  'u':   'ु',
-  'e':   'े',
-  'o':   'ो',
+  'aa': 'ा', 'AA': 'ा',
+  'ii': 'ी', 'ee': 'ी',
+  'uu': 'ू', 'oo': 'ू',
+  'ai': 'ै', 'ei': 'ै',
+  'au': 'ौ', 'ou': 'ौ',
+  'ri': 'ृ', 'Ri': 'ृ',
+  'a': '',   // inherent schwa
+  'i': 'ि',
+  'u': 'ु',
+  'e': 'े',
+  'o': 'ो',
 };
 
-// Sorted vowel keys by length desc for matching
 const VOWEL_KEYS = Object.keys(VOWELS_INDEPENDENT).sort((a, b) => b.length - a.length);
-
-// Sorted consonant keys by length desc for matching
 const CONSONANT_KEYS = Object.keys(CONSONANTS).sort((a, b) => b.length - a.length);
-
-// Characters that are case-sensitive (uppercase means retroflex)
 const CASE_SENSITIVE_PREFIXES = new Set(['T', 'D', 'N', 'S', 'R', 'L', 'A']);
 
-/**
- * Try to match a consonant at position `pos` in `text`.
- */
+const DIGIT_MAP: Record<string, string> = {
+  '0': '०', '1': '१', '2': '२', '3': '३', '4': '४',
+  '5': '५', '6': '६', '7': '७', '8': '८', '9': '९',
+};
+
+// ── Matching functions ──────────────────────────────────────────────────
+
 function matchConsonant(text: string, pos: number): { devanagari: string; len: number } | null {
   for (const key of CONSONANT_KEYS) {
     if (pos + key.length > text.length) continue;
     const slice = text.substring(pos, pos + key.length);
-
-    // For keys starting with uppercase letters, do exact match
     if (CASE_SENSITIVE_PREFIXES.has(key[0])) {
       if (slice === key) return { devanagari: CONSONANTS[key], len: key.length };
     } else {
-      // Case-insensitive match for lowercase keys, but skip if input is uppercase
-      // and there's a separate uppercase mapping
       if (slice.toLowerCase() === key.toLowerCase()) {
-        // Make sure we're not accidentally matching an uppercase variant
         const upperKey = slice[0].toUpperCase() + slice.substring(1);
         if (slice[0] === slice[0].toUpperCase() && slice[0] !== slice[0].toLowerCase() && CONSONANTS[upperKey]) {
-          continue; // skip, let the uppercase variant match
+          continue;
         }
         return { devanagari: CONSONANTS[key], len: key.length };
       }
@@ -161,9 +146,6 @@ function matchConsonant(text: string, pos: number): { devanagari: string; len: n
   return null;
 }
 
-/**
- * Try to match a vowel at position `pos` in `text`.
- */
 function matchVowel(text: string, pos: number): { key: string; len: number } | null {
   for (const key of VOWEL_KEYS) {
     if (pos + key.length > text.length) continue;
@@ -177,324 +159,233 @@ function matchVowel(text: string, pos: number): { key: string; len: number } | n
   return null;
 }
 
-/**
- * Check if there's a consonant at the given position
- */
-function hasConsonantAt(text: string, pos: number): boolean {
-  return matchConsonant(text, pos) !== null;
-}
+// ── Word overrides (comprehensive Hinglish dictionary) ──────────────────
 
-// ── Common Hinglish word overrides for accuracy ─────────────────────────
-// These handle words that are commonly typed differently from strict ITRANS.
 const WORD_OVERRIDES: Record<string, string> = {
-  // Common greetings & words
-  'namaste': 'नमस्ते',
-  'namaskar': 'नमस्कार',
-  'dhanyavad': 'धन्यवाद',
-  'dhanyavaad': 'धन्यवाद',
-  'shukriya': 'शुक्रिया',
-  'shukria': 'शुक्रिया',
-  
-  // Pronouns & common words
-  'hai': 'है',
-  'hain': 'हैं',
-  'tha': 'था',
-  'thi': 'थी',
-  'the': 'थे',
-  'hei': 'है',
-  'ho': 'हो',
-  'ka': 'का',
-  'ki': 'की',
-  'ke': 'के',
-  'ko': 'को',
-  'se': 'से',
-  'me': 'में',
-  'mein': 'में',
-  'mai': 'मैं',
-  'main': 'मैं',
-  'hum': 'हम',
-  'tum': 'तुम',
-  'aap': 'आप',
-  'woh': 'वह',
-  'yeh': 'यह',
-  'ye': 'ये',
-  'wo': 'वो',
-  'vo': 'वो',
-  'jo': 'जो',
-  'so': 'सो',
-  'to': 'तो',
-  'na': 'ना',
-  'ya': 'या',
-  'par': 'पर',
-  'per': 'पर',
-  'aur': 'और',
-  'or': 'और',
-  'nahi': 'नहीं',
-  'nahin': 'नहीं',
-  'nhi': 'नहीं',
-  'kya': 'क्या',
-  'kyu': 'क्यूँ',
-  'kyon': 'क्यों',
-  'kyun': 'क्यूँ',
-  'kyunki': 'क्योंकि',
-  'isliye': 'इसलिए',
-  'lekin': 'लेकिन',
-  'magar': 'मगर',
-  'jab': 'जब',
-  'tab': 'तब',
-  'ab': 'अब',
-  'bhi': 'भी',
-  'hi': 'ही',
-  'sirf': 'सिर्फ़',
+  // ── Pronouns & particles ──
+  'mai': 'मैं', 'main': 'मैं', 'mein': 'में', 'me': 'में',
+  'hum': 'हम', 'humne': 'हमने', 'humko': 'हमको', 'humse': 'हमसे',
+  'tum': 'तुम', 'tumne': 'तुमने', 'tumko': 'तुमको', 'tumse': 'तुमसे', 'tumhara': 'तुम्हारा', 'tumhari': 'तुम्हारी', 'tumhare': 'तुम्हारे',
+  'aap': 'आप', 'aapka': 'आपका', 'aapki': 'आपकी', 'aapke': 'आपके', 'aapko': 'आपको', 'aapse': 'आपसे', 'aapne': 'आपने',
+  'woh': 'वह', 'wo': 'वो', 'wahan': 'वहाँ', 'wahin': 'वहीं',
+  'yeh': 'यह', 'ye': 'ये', 'yahan': 'यहाँ', 'yahin': 'यहीं',
+  'jo': 'जो', 'jo': 'जो',
+  'koi': 'कोई', 'kuch': 'कुछ', 'sab': 'सब', 'sabhi': 'सभी',
+  'apna': 'अपना', 'apni': 'अपनी', 'apne': 'अपने',
+  'is': 'इस', 'iska': 'इसका', 'iski': 'इसकी', 'iske': 'इसके', 'isko': 'इसको', 'isse': 'इससे', 'isne': 'इसने', 'isliye': 'इसलिए', 'isलिye': 'इसलिए',
+  'us': 'उस', 'uska': 'उसका', 'uski': 'उसकी', 'uske': 'उसके', 'usko': 'उसको', 'usse': 'उससे', 'usne': 'उसने',
+  'mera': 'मेरा', 'meri': 'मेरी', 'mere': 'मेरे',
+  'tera': 'तेरा', 'teri': 'तेरी', 'tere': 'तेरे',
+  'hamara': 'हमारा', 'hamari': 'हमारी', 'hamare': 'हमारे',
+  'unka': 'उनका', 'unki': 'उनकी', 'unke': 'उनके', 'unko': 'उनको',
+  'inka': 'इनका', 'inki': 'इनकी', 'inke': 'इनके',
+  'ka': 'का', 'ki': 'की', 'ke': 'के', 'ko': 'को', 'se': 'से',
+  'par': 'पर', 'per': 'पर', 'pe': 'पे',
+  'aur': 'और', 'or': 'और',
+  'ya': 'या', 'na': 'ना', 'to': 'तो', 'so': 'सो',
+  'bhi': 'भी', 'hi': 'ही', 'he': 'हे',
+  'agar': 'अगर', 'lekin': 'लेकिन', 'magar': 'मगर', 'parantu': 'परन्तु', 'kintu': 'किन्तु',
+  'jab': 'जब', 'tab': 'तब', 'ab': 'अब', 'kabhi': 'कभी', 'abhi': 'अभी',
+  'jaise': 'जैसे', 'waise': 'वैसे', 'kaise': 'कैसे', 'aise': 'ऐसे',
+  'jaisa': 'जैसा', 'waisa': 'वैसा', 'kaisa': 'कैसा', 'aisa': 'ऐसा',
+  'jaisi': 'जैसी', 'waisi': 'वैसी', 'kaisi': 'कैसी', 'aisi': 'ऐसी',
+  'jahan': 'जहाँ', 'kahan': 'कहाँ', 'wahan': 'वहाँ',
+  'idhar': 'इधर', 'udhar': 'उधर', 'kidhar': 'किधर',
+  'sirf': 'सिर्फ़', 'bas': 'बस', 'bahut': 'बहुत', 'zyada': 'ज़्यादा', 'kam': 'कम',
+  'phir': 'फिर', 'fir': 'फिर',
 
-  // Common nouns
-  'paani': 'पानी',
-  'pani': 'पानी',
-  'kaam': 'काम',
-  'naam': 'नाम',
-  'ghar': 'घर',
-  'desh': 'देश',
-  'log': 'लोग',
-  'din': 'दिन',
-  'raat': 'रात',
-  'samay': 'समय',
-  'waqt': 'वक़्त',
+  // ── Verbs & auxiliaries ──
+  'hai': 'है', 'hain': 'हैं', 'ho': 'हो',
+  'tha': 'था', 'thi': 'थी', 'the': 'थे', 'thin': 'थीं',
+  'hoga': 'होगा', 'hogi': 'होगी', 'honge': 'होंगे', 'hoge': 'होगे',
+  'hu': 'हूँ', 'hoo': 'हूँ', 'hun': 'हूँ', 'houn': 'हूँ',
+  'karo': 'करो', 'karo': 'करो', 'karta': 'करता', 'karti': 'करती', 'karte': 'करते',
+  'kiya': 'किया', 'kiye': 'किये', 'karna': 'करना', 'karke': 'करके',
+  'karega': 'करेगा', 'karegi': 'करेगी', 'karenge': 'करेंगे',
+  'hona': 'होना', 'hota': 'होता', 'hoti': 'होती', 'hote': 'होते',
+  'jana': 'जाना', 'jata': 'जाता', 'jati': 'जाती', 'jate': 'जाते',
+  'jaata': 'जाता', 'jaati': 'जाती', 'jaate': 'जाते',
+  'jao': 'जाओ', 'jaa': 'जा', 'ja': 'जा',
+  'aana': 'आना', 'aata': 'आता', 'aati': 'आती', 'aate': 'आते',
+  'aao': 'आओ', 'aa': 'आ',
+  'dena': 'देना', 'deta': 'देता', 'deti': 'देती', 'dete': 'देते',
+  'do': 'दो', 'de': 'दे', 'diya': 'दिया',
+  'lena': 'लेना', 'leta': 'लेता', 'leti': 'लेती', 'lete': 'लेते',
+  'lo': 'लो', 'le': 'ले', 'liya': 'लिया',
+  'bolna': 'बोलना', 'bolo': 'बोलो', 'bola': 'बोला', 'boli': 'बोली',
+  'likhna': 'लिखना', 'likho': 'लिखो', 'likha': 'लिखा', 'likhi': 'लिखी',
+  'padhna': 'पढ़ना', 'padho': 'पढ़ो', 'padha': 'पढ़ा', 'padhi': 'पढ़ी',
+  'dekhna': 'देखना', 'dekho': 'देखो', 'dekha': 'देखा', 'dekhi': 'देखी',
+  'sunna': 'सुनना', 'suno': 'सुनो', 'suna': 'सुना', 'suni': 'सुनी',
+  'samajhna': 'समझना', 'samjho': 'समझो', 'samjha': 'समझा',
+  'rakhna': 'रखना', 'rakho': 'रखो', 'rakha': 'रखा',
+  'milna': 'मिलना', 'mila': 'मिला', 'mili': 'मिली', 'mile': 'मिले',
+  'chalna': 'चलना', 'chalo': 'चलो', 'chala': 'चला', 'chali': 'चली',
+  'khana': 'खाना', 'khao': 'खाओ', 'khaya': 'खाया',
+  'peena': 'पीना', 'piyo': 'पियो', 'piya': 'पिया',
+  'sochna': 'सोचना', 'socho': 'सोचो', 'socha': 'सोचा',
+  'chahna': 'चाहना', 'chahta': 'चाहता', 'chahti': 'चाहती', 'chahte': 'चाहते', 'chahiye': 'चाहिए',
+  'sakna': 'सकना', 'sakta': 'सकता', 'sakti': 'सकती', 'sakte': 'सकते', 'saka': 'सका', 'sake': 'सके',
+  'pana': 'पाना', 'pata': 'पाता', 'pati': 'पाती', 'paye': 'पाये',
+  'rehna': 'रहना', 'rehta': 'रहता', 'rehti': 'रहती', 'rehte': 'रहते', 'raha': 'रहा', 'rahi': 'रही', 'rahe': 'रहे',
+  'kar': 'कर', 'sakta': 'सकता',
+  'madad': 'मदद',
+  'batana': 'बताना', 'batao': 'बताओ', 'bataya': 'बताया',
+  'bhejana': 'भेजना', 'bhejo': 'भेजो', 'bheja': 'भेजा',
 
-  // Verbs
-  'karna': 'करना',
-  'hona': 'होना',
-  'jana': 'जाना',
-  'aana': 'आना',
-  'dena': 'देना',
-  'lena': 'लेना',
-  'bolna': 'बोलना',
-  'likhna': 'लिखना',
-  'padhna': 'पढ़ना',
-  'dekhna': 'देखना',
-  'sunna': 'सुनना',
-  'samajhna': 'समझना',
-  'karenge': 'करेंगे',
+  // ── Interrogatives ──
+  'kya': 'क्या', 'kaun': 'कौन', 'kab': 'कब', 'kyun': 'क्यूँ', 'kyon': 'क्यों', 'kyunki': 'क्योंकि',
+  'kitna': 'कितना', 'kitni': 'कितनी', 'kitne': 'कितने',
+  'konsa': 'कौनसा', 'konsi': 'कौनसी',
 
-  // Names / Titles
-  'shri': 'श्री',
-  'shree': 'श्री',
-  'smt': 'श्रीमती',
-  'ji': 'जी',
-  'sahab': 'साहब',
-  'sahib': 'साहिब',
-  
-  // Government terms
-  'sarkaar': 'सरकार',
-  'sarkar': 'सरकार',
-  'mantri': 'मंत्री',
-  'mantralaya': 'मंत्रालय',
-  'vibhag': 'विभाग',
-  'niyam': 'नियम',
-  'aadesh': 'आदेश',
-  'adesh': 'आदेश',
-  'patra': 'पत्र',
+  // ── Negation ──
+  'nahi': 'नहीं', 'nahin': 'नहीं', 'nhi': 'नहीं', 'mat': 'मत',
+
+  // ── Greetings ──
+  'namaste': 'नमस्ते', 'namaskar': 'नमस्कार',
+  'dhanyavad': 'धन्यवाद', 'dhanyavaad': 'धन्यवाद', 'shukriya': 'शुक्रिया',
+  'alvida': 'अलविदा', 'swagat': 'स्वागत',
+
+  // ── Common nouns ──
+  'paani': 'पानी', 'pani': 'पानी',
+  'kaam': 'काम', 'naam': 'नाम', 'ghar': 'घर', 'desh': 'देश',
+  'log': 'लोग', 'din': 'दिन', 'raat': 'रात', 'samay': 'समय',
+  'jagah': 'जगह', 'tarah': 'तरह', 'baat': 'बात', 'cheez': 'चीज़',
+  'kaam': 'काम', 'dost': 'दोस्त', 'zindagi': 'ज़िन्दगी', 'duniya': 'दुनिया',
+  'aadmi': 'आदमी', 'aurat': 'औरत', 'baccha': 'बच्चा', 'bachcha': 'बच्चा',
+  'ladka': 'लड़का', 'ladki': 'लड़की',
+  'shahar': 'शहर', 'gaon': 'गाँव', 'gaav': 'गाँव',
+  'school': 'स्कूल', 'college': 'कॉलेज',
+  'paisa': 'पैसा', 'paise': 'पैसे', 'rupaye': 'रुपये', 'rupay': 'रुपय',
+  'saal': 'साल', 'mahina': 'महीना', 'hafta': 'हफ़्ता',
+  'subah': 'सुबह', 'dopahar': 'दोपहर', 'shaam': 'शाम',
+
+  // ── Government / official terms ──
+  'sarkaar': 'सरकार', 'sarkar': 'सरकार',
+  'mantri': 'मंत्री', 'mantralaya': 'मंत्रालय',
+  'vibhag': 'विभाग', 'niyam': 'नियम',
+  'aadesh': 'आदेश', 'adesh': 'आदेश',
+  'patra': 'पत्र', 'patrachar': 'पत्राचार',
   'prashasan': 'प्रशासन',
-  'vishwavidyalaya': 'विश्वविद्यालय',
-  'vidyalaya': 'विद्यालय',
-  'adhyaksh': 'अध्यक्ष',
-  'sachiv': 'सचिव',
-  'karyalay': 'कार्यालय',
-  'karyalaya': 'कार्यालय',
-  'karya': 'कार्य',
-  'yojana': 'योजना',
-  'niti': 'नीति',
-  'neeti': 'नीति',
-  'seva': 'सेवा',
-  'adhikari': 'अधिकारी',
-  'adhikaari': 'अधिकारी',
-
-  // Others
-  'sthaan': 'स्थान',
-  'sthan': 'स्थान',
-  'vishesh': 'विशेष',
-  'sthiti': 'स्थिति',
-  'prakriya': 'प्रक्रिया',
-  'vyavastha': 'व्यवस्था',
-  'suraksha': 'सुरक्षा',
-  'swasthya': 'स्वास्थ्य',
-  'shiksha': 'शिक्षा',
-  'vidya': 'विद्या',
-  'gyan': 'ज्ञान',
-  'gyaan': 'ज्ञान',
-  'vigyan': 'विज्ञान',
-  'kshetra': 'क्षेत्र',
-  'kshatriya': 'क्षत्रिय',
-  'rashtra': 'राष्ट्र',
-  'raashtra': 'राष्ट्र',
-  'bharat': 'भारत',
-  'bharatiya': 'भारतीय',
-  'pradesh': 'प्रदेश',
-  'madhya': 'मध्य',
-  'uttarpradesh': 'उत्तरप्रदेश',
-  'rajya': 'राज्य',
-  'shaasan': 'शासन',
-  'shasan': 'शासन',
-  'shaasakeey': 'शासकीय',
-  'shasakiy': 'शासकीय',
-  'shasakiya': 'शासकीय',
-  'hindi': 'हिन्दी',
-  'patrachar': 'पत्राचार',
-  'roopantar': 'रूपांतर',
-  'roopantarak': 'रूपांतरक',
-  'kripaya': 'कृपया',
-  'kripya': 'कृपया',
+  'vishwavidyalaya': 'विश्वविद्यालय', 'vidyalaya': 'विद्यालय',
+  'adhyaksh': 'अध्यक्ष', 'sachiv': 'सचिव',
+  'karyalay': 'कार्यालय', 'karyalaya': 'कार्यालय',
+  'karya': 'कार्य', 'yojana': 'योजना',
+  'niti': 'नीति', 'neeti': 'नीति',
+  'seva': 'सेवा', 'adhikari': 'अधिकारी', 'adhikaari': 'अधिकारी',
+  'sthaan': 'स्थान', 'sthan': 'स्थान',
+  'vishesh': 'विशेष', 'sthiti': 'स्थिति',
+  'prakriya': 'प्रक्रिया', 'vyavastha': 'व्यवस्था',
+  'suraksha': 'सुरक्षा', 'swasthya': 'स्वास्थ्य',
+  'shiksha': 'शिक्षा', 'vidya': 'विद्या',
+  'gyan': 'ज्ञान', 'gyaan': 'ज्ञान', 'vigyan': 'विज्ञान',
+  'kshetra': 'क्षेत्र', 'kshatriya': 'क्षत्रिय',
+  'rashtra': 'राष्ट्र', 'raashtra': 'राष्ट्र',
+  'bharat': 'भारत', 'bharatiya': 'भारतीय',
+  'pradesh': 'प्रदेश', 'madhya': 'मध्य',
+  'rajya': 'राज्य', 'shasan': 'शासन', 'shaasan': 'शासन',
+  'shasakiy': 'शासकीय', 'shasakiya': 'शासकीय',
+  'hindi': 'हिन्दी', 'roopantar': 'रूपांतर', 'roopantarak': 'रूपांतरक',
+  'kripaya': 'कृपया', 'kripya': 'कृपया',
   'punah': 'पुनः',
-  'anuvaad': 'अनुवाद',
-  'anuvad': 'अनुवाद',
+  'anuvaad': 'अनुवाद', 'anuvad': 'अनुवाद',
+  'nirdesh': 'निर्देश', 'suchna': 'सूचना', 'soochna': 'सूचना',
+  'anumati': 'अनुमति', 'prativedan': 'प्रतिवेदन',
+  'sthapana': 'स्थापना', 'niyukti': 'नियुक्ति',
+  'prastavna': 'प्रस्तावना', 'nirdeshak': 'निर्देशक',
+  'mahasachiv': 'महासचिव', 'upadhyaksh': 'उपाध्यक्ष',
+  'kulpati': 'कुलपति', 'kulgeet': 'कुलगीत',
+  'pariksha': 'परीक्षा', 'parikshaफल': 'परीक्षाफल',
+  'pramanpatra': 'प्रमाणपत्र', 'praman': 'प्रमाण',
+  'sanshodhan': 'संशोधन', 'sanshodh': 'संशोध',
 
-  // Names
-  'manish': 'मनीष',
-  'rajesh': 'राजेश',
-  'suresh': 'सुरेश',
-  'ramesh': 'रमेश',
-  'dinesh': 'दिनेश',
-  'ganesh': 'गणेश',
-  'mahesh': 'महेश',
-  'mukesh': 'मुकेश',
-  'rakesh': 'राकेश',
-  'naresh': 'नरेश',
-  'yogesh': 'योगेश',
-  'lokesh': 'लोकेश',
-  'kamlesh': 'कमलेश',
-  'hitesh': 'हितेश',
-  'jitesh': 'जितेश',
-  'ritesh': 'रितेश',
-  'nitesh': 'नितेश',
-  'rupesh': 'रूपेश',
-  'amit': 'अमित',
-  'sumit': 'सुमित',
-  'rohit': 'रोहित',
-  'mohit': 'मोहित',
-  'ankit': 'अंकित',
-  'vinod': 'विनोद',
-  'pramod': 'प्रमोद',
-  'arvind': 'अरविंद',
-  'anil': 'अनिल',
-  'sunil': 'सुनील',
-  'rahul': 'राहुल',
-  'krishna': 'कृष्णा',
-  'krishn': 'कृष्ण',
-  'ram': 'राम',
-  'shyam': 'श्याम',
-  'mohan': 'मोहन',
-  'sohan': 'सोहन',
-  'sita': 'सीता',
-  'geeta': 'गीता',
-  'sunita': 'सुनीता',
-  'anita': 'अनिता',
-  'priya': 'प्रिया',
-  'pooja': 'पूजा',
-  'puja': 'पूजा',
+  // ── Titles / honorifics ──
+  'shri': 'श्री', 'shree': 'श्री', 'smt': 'श्रीमती',
+  'ji': 'जी', 'sahab': 'साहब', 'sahib': 'साहिब',
+  'mahoday': 'महोदय', 'mahodaya': 'महोदया',
+  'maananeeya': 'माननीया', 'maananiy': 'माननीय',
 
-  // Numbers as words
-  'ek': 'एक',
-  'do': 'दो',
-  'teen': 'तीन',
-  'char': 'चार',
-  'paanch': 'पाँच',
-  'panch': 'पाँच',
-  'cheh': 'छह',
-  'saat': 'सात',
-  'aath': 'आठ',
-  'nau': 'नौ',
-  'das': 'दस',
+  // ── Common names ──
+  'manish': 'मनीष', 'rajesh': 'राजेश', 'suresh': 'सुरेश',
+  'ramesh': 'रमेश', 'dinesh': 'दिनेश', 'ganesh': 'गणेश',
+  'mahesh': 'महेश', 'mukesh': 'मुकेश', 'rakesh': 'राकेश',
+  'naresh': 'नरेश', 'yogesh': 'योगेश', 'lokesh': 'लोकेश',
+  'kamlesh': 'कमलेश', 'hitesh': 'हितेश', 'ritesh': 'रितेश',
+  'nitesh': 'नितेश', 'rupesh': 'रूपेश',
+  'amit': 'अमित', 'sumit': 'सुमित', 'rohit': 'रोहित',
+  'mohit': 'मोहित', 'ankit': 'अंकित', 'vinod': 'विनोद',
+  'pramod': 'प्रमोद', 'arvind': 'अरविंद',
+  'anil': 'अनिल', 'sunil': 'सुनील', 'rahul': 'राहुल',
+  'krishna': 'कृष्णा', 'krishn': 'कृष्ण',
+  'ram': 'राम', 'shyam': 'श्याम', 'mohan': 'मोहन', 'sohan': 'सोहन',
+  'sita': 'सीता', 'geeta': 'गीता', 'sunita': 'सुनीता',
+  'anita': 'अनिता', 'priya': 'प्रिया', 'pooja': 'पूजा', 'puja': 'पूजा',
+
+  // ── Numbers ──
+  'ek': 'एक', 'do': 'दो', 'teen': 'तीन', 'char': 'चार',
+  'paanch': 'पाँच', 'panch': 'पाँच',
+  'cheh': 'छह', 'saat': 'सात', 'aath': 'आठ', 'nau': 'नौ', 'das': 'दस',
+
+  // ── Adjectives ──
+  'accha': 'अच्छा', 'achcha': 'अच्छा', 'acha': 'अच्छा',
+  'bura': 'बुरा', 'bada': 'बड़ा', 'chhota': 'छोटा', 'chota': 'छोटा',
+  'naya': 'नया', 'purana': 'पुराना', 'sundar': 'सुंदर', 'sunder': 'सुंदर',
+  'mushkil': 'मुश्किल', 'aasan': 'आसान',
+  'zaruri': 'ज़रूरी', 'jaruri': 'ज़रूरी', 'zaroori': 'ज़रूरी',
+
+  // ── Misc common ──
+  'dhanyawad': 'धन्यवाद',
+  'pranam': 'प्रणाम', 'pranaam': 'प्रणाम',
+  'sampark': 'संपर्क', 'vishwas': 'विश्वास',
+  'samasya': 'समस्या', 'samadhan': 'समाधान',
+  'sahayata': 'सहायता', 'sahyog': 'सहयोग',
+  'upayog': 'उपयोग', 'prayog': 'प्रयोग',
+  'prayaas': 'प्रयास', 'prayas': 'प्रयास',
+  'safal': 'सफल', 'vifal': 'विफल', 'safalta': 'सफलता',
+  'istemal': 'इस्तेमाल', 'istemaal': 'इस्तेमाल',
 };
-
-// Devanagari digit mapping
-const DIGIT_MAP: Record<string, string> = {
-  '0': '०', '1': '१', '2': '२', '3': '३', '4': '४',
-  '5': '५', '6': '६', '7': '७', '8': '८', '9': '९',
-};
-
-// ── Schwa Deletion ──────────────────────────────────────────────────────
-// In Hindi, the inherent 'a' at the end of words and in certain medial 
-// positions is typically not pronounced. This function applies basic
-// schwa deletion rules to produce more natural output.
-function applySchwaRules(chars: { base: string; matra: string; isConsonant: boolean }[]): string {
-  // This is handled inline during transliteration via smarter 'a' detection.
-  // We keep the output as-is since the transliteration handles it.
-  return chars.map(c => c.base + c.matra).join('');
-}
 
 // ── Main API ────────────────────────────────────────────────────────────
 
-/**
- * Transliterate Hinglish (romanized Hindi) to Unicode Devanagari.
- */
 export function transliterateToHindi(input: string): string {
   if (!input) return '';
-
-  // Split on whitespace and punctuation, preserving delimiters
   const tokens = input.split(/(\s+|[,;:!?\-()'"\.]+)/);
-
   return tokens.map(token => {
-    // Preserve whitespace and punctuation
     if (/^\s+$/.test(token)) return token;
     if (/^[,;:!?\-()'"]+$/.test(token)) return token;
-
-    // Handle period specially
     if (token === '.') return '।';
     if (token === '..') return '॥';
-
-    // Check word overrides (case-insensitive)
     const lower = token.toLowerCase();
     if (WORD_OVERRIDES[lower]) return WORD_OVERRIDES[lower];
-
     return transliterateWord(token);
   }).join('');
 }
 
 /**
- * Transliterate a single word.
+ * Transliterate a single word character by character.
+ * 
+ * KEY RULE: No auto-halant between consonants.
+ * In Hinglish, "aapki" means आपकी not आप्की.
+ * Conjuncts are ONLY created via explicit multi-char consonant mappings.
+ * Use '_' to force halant: "k_ya" → क्या
  */
 function transliterateWord(word: string): string {
   let result = '';
   let i = 0;
-  let prevWasConsonant = false;
 
   while (i < word.length) {
-    // ── Try anusvara/chandrabindu markers ────────────────────────────
-    // 'M' or '~' at this position = anusvara (ं)
-    if (word[i] === 'M' && !hasConsonantAt(word, i)) {
-      result += 'ं';
-      i++;
-      prevWasConsonant = false;
-      continue;
+    // ── Force-halant with underscore: C_C → C + halant + C ──
+    // (allows explicit conjunct creation)
+
+    // ── Anusvara / Chandrabindu / Visarga markers ──
+    if (word[i] === 'M' && !matchConsonant(word, i)) {
+      result += 'ं'; i++; continue;
     }
     if (word[i] === '~' && word[i + 1] === 'n') {
-      result += 'ँ';
-      i += 2;
-      prevWasConsonant = false;
-      continue;
+      result += 'ँ'; i += 2; continue;
     }
-    if (word[i] === 'H' && !hasConsonantAt(word, i)) {
-      result += 'ः';
-      i++;
-      prevWasConsonant = false;
-      continue;
-    }
-
-    // ── Handle 'n' as anusvara before consonants ────────────────────
-    if (word[i] === 'n' || word[i] === 'N') {
-      // Check if 'n'/'N' followed by a consonant could be anusvara
-      // But first check if 'n' itself starts a longer consonant match
-      const nConsonant = matchConsonant(word, i);
-      if (nConsonant && nConsonant.len > 1) {
-        // It's part of a digraph like 'nh', 'ng', 'nk', 'nch', etc. — handle as consonant below
-      } else if (word[i] === 'n' && i + 1 < word.length && prevWasConsonant) {
-        const afterN = matchConsonant(word, i + 1);
-        if (afterN) {
-          result += 'ं';
-          i++;
-          prevWasConsonant = false;
-          continue;
-        }
-      }
+    if (word[i] === 'H' && !matchConsonant(word, i)) {
+      result += 'ः'; i++; continue;
     }
 
     // ── Try consonant ───────────────────────────────────────────────
@@ -502,55 +393,45 @@ function transliterateWord(word: string): string {
     if (cm) {
       i += cm.len;
 
+      // Check for '_' force-halant marker
+      if (i < word.length && word[i] === '_') {
+        result += cm.devanagari + HALANT;
+        i++; // skip '_'
+        continue;
+      }
+
       // Look ahead for a vowel (matra)
       const vm = matchVowel(word, i);
       if (vm) {
         result += cm.devanagari + MATRAS[vm.key];
         i += vm.len;
-        prevWasConsonant = MATRAS[vm.key] === ''; // Only if inherent 'a'
         continue;
       }
 
-      // No vowel follows. Check if another consonant follows → add halant
-      if (i < word.length && hasConsonantAt(word, i)) {
-        result += cm.devanagari + HALANT;
-        prevWasConsonant = true;
-        continue;
-      }
-
-      // End of word or non-Hindi char → consonant with inherent 'a'
-      // (Devanagari doesn't need explicit 'a' — the character carries it)
+      // No vowel follows → consonant with inherent 'a' (NO halant!)
+      // This is the key difference from strict ITRANS:
+      // In Hinglish, "sakta" = स + क + ता, not स्क्ता
       result += cm.devanagari;
-      prevWasConsonant = true;
       continue;
     }
 
     // ── Try vowel (independent form) ────────────────────────────────
     const vm = matchVowel(word, i);
     if (vm) {
-      if (prevWasConsonant) {
-        // After a consonant that already has inherent 'a', treat as matra
-        result += MATRAS[vm.key];
-      } else {
-        result += VOWELS_INDEPENDENT[vm.key];
-      }
+      result += VOWELS_INDEPENDENT[vm.key];
       i += vm.len;
-      prevWasConsonant = false;
       continue;
     }
 
     // ── Digits ──────────────────────────────────────────────────────
     if (DIGIT_MAP[word[i]]) {
       result += DIGIT_MAP[word[i]];
-      i++;
-      prevWasConsonant = false;
-      continue;
+      i++; continue;
     }
 
-    // ── Pass through unknown characters ─────────────────────────────
+    // ── Pass through ────────────────────────────────────────────────
     result += word[i];
     i++;
-    prevWasConsonant = false;
   }
 
   return result;
