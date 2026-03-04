@@ -322,7 +322,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'anita': 'अनिता', 'priya': 'प्रिया', 'pooja': 'पूजा', 'puja': 'पूजा',
 
   // ── Numbers ──
-  'ek': 'एक', 'do': 'दो', 'teen': 'तीन', 'char': 'चार',
+  'ek': 'एक', 'teen': 'तीन', 'char': 'चार',
   'paanch': 'पाँच', 'panch': 'पाँच',
   'cheh': 'छह', 'saat': 'सात', 'aath': 'आठ', 'nau': 'नौ', 'das': 'दस',
 
