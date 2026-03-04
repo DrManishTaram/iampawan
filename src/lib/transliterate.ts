@@ -17,7 +17,6 @@ const CONSONANTS: Record<string, string> = {
   'cch': 'च्छ',
   'chh': 'छ',
   'shr': 'श्र',
-  'shr': 'श्र',
   'gya': 'ज्ञ',
   'gny': 'ज्ञ',
   'dny': 'ज्ञ',
