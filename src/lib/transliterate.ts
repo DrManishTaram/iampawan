@@ -228,7 +228,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'sakna': 'सकना', 'sakta': 'सकता', 'sakti': 'सकती', 'sakte': 'सकते', 'saka': 'सका', 'sake': 'सके',
   'pana': 'पाना', 'pata': 'पाता', 'pati': 'पाती', 'paye': 'पाये',
   'rehna': 'रहना', 'rehta': 'रहता', 'rehti': 'रहती', 'rehte': 'रहते', 'raha': 'रहा', 'rahi': 'रही', 'rahe': 'रहे',
-  'kar': 'कर', 'sakta': 'सकता',
+  'kar': 'कर',
   'madad': 'मदद',
   'batana': 'बताना', 'batao': 'बताओ', 'bataya': 'बताया',
   'bhejana': 'भेजना', 'bhejo': 'भेजो', 'bheja': 'भेजा',
