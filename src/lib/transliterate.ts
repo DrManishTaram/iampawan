@@ -199,7 +199,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'tha': 'था', 'thi': 'थी', 'the': 'थे', 'thin': 'थीं',
   'hoga': 'होगा', 'hogi': 'होगी', 'honge': 'होंगे', 'hoge': 'होगे',
   'hu': 'हूँ', 'hoo': 'हूँ', 'hun': 'हूँ', 'houn': 'हूँ',
-  'karo': 'करो', 'karo': 'करो', 'karta': 'करता', 'karti': 'करती', 'karte': 'करते',
+  'karo': 'करो', 'karta': 'करता', 'karti': 'करती', 'karte': 'करते',
   'kiya': 'किया', 'kiye': 'किये', 'karna': 'करना', 'karke': 'करके',
   'karega': 'करेगा', 'karegi': 'करेगी', 'karenge': 'करेंगे',
   'hona': 'होना', 'hota': 'होता', 'hoti': 'होती', 'hote': 'होते',
