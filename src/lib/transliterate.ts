@@ -251,7 +251,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   'kaam': 'काम', 'naam': 'नाम', 'ghar': 'घर', 'desh': 'देश',
   'log': 'लोग', 'din': 'दिन', 'raat': 'रात', 'samay': 'समय',
   'jagah': 'जगह', 'tarah': 'तरह', 'baat': 'बात', 'cheez': 'चीज़',
-  'kaam': 'काम', 'dost': 'दोस्त', 'zindagi': 'ज़िन्दगी', 'duniya': 'दुनिया',
+  'dost': 'दोस्त', 'zindagi': 'ज़िन्दगी', 'duniya': 'दुनिया',
   'aadmi': 'आदमी', 'aurat': 'औरत', 'baccha': 'बच्चा', 'bachcha': 'बच्चा',
   'ladka': 'लड़का', 'ladki': 'लड़की',
   'shahar': 'शहर', 'gaon': 'गाँव', 'gaav': 'गाँव',
